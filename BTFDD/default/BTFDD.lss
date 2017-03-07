@@ -1,0 +1,3262 @@
+
+BTFDD.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00001180  00001214  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00001180  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000081  00800100  00800100  00001214  2**0
+                  ALLOC
+  3 .comment      00000011  00000000  00000000  00001214  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 000000e0  00000000  00000000  00001225  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_pubnames 00000589  00000000  00000000  00001305  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001e62  00000000  00000000  0000188e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000d6b  00000000  00000000  000036f0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00001583  00000000  00000000  0000445b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000340  00000000  00000000  000059e0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000071c  00000000  00000000  00005d20  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000542  00000000  00000000  0000643c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 0b 01 	jmp	0x216	; 0x216 <__ctors_end>
+       4:	0c 94 ef 04 	jmp	0x9de	; 0x9de <__vector_1>
+       8:	0c 94 62 03 	jmp	0x6c4	; 0x6c4 <__vector_2>
+       c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      10:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      14:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      18:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      1c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      20:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      24:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      28:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      2c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      30:	0c 94 32 08 	jmp	0x1064	; 0x1064 <__vector_12>
+      34:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      38:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      3c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      40:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      44:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      48:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      4c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      50:	0c 94 6e 02 	jmp	0x4dc	; 0x4dc <__vector_20>
+      54:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      58:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      5c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      60:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      64:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      68:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      6c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      70:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      74:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+      78:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+
+0000007c <__trampolines_end>:
+      7c:	2b 53       	subi	r18, 0x3B	; 59
+      7e:	52 41       	sbci	r21, 0x12	; 18
+      80:	4d 20       	and	r4, r13
+      82:	52 45       	sbci	r21, 0x52	; 82
+      84:	47 20       	and	r4, r7
+	...
+
+00000087 <__c.1793>:
+      87:	2b 53 50 45 43 49 46 59 0d 0a 00                    +SPECIFY...
+
+00000092 <__c.1565>:
+      92:	2b 55 41 52 54 20 4f 56 45 52 46 4c 4f 57 00        +UART OVERFLOW.
+
+000000a1 <__c.1516>:
+      a1:	2b 53 52 41 4d 20 57 52 49 54 45 20 44 4f 4e 45     +SRAM WRITE DONE
+      b1:	20 00                                                .
+
+000000b3 <__c.1504>:
+      b3:	2b 53 52 41 4d 20 57 52 49 54 45 20 42 59 54 45     +SRAM WRITE BYTE
+      c3:	53 20 00                                            S .
+
+000000c6 <__c.2026>:
+      c6:	2b 49 4e 54 31 0d 0a 00                             +INT1...
+
+000000ce <__c.2009>:
+      ce:	2b 49 4e 54 30 20 44 4f 4e 45 00                    +INT0 DONE.
+
+000000d9 <__c.2001>:
+      d9:	52 45 53 55 4c 54 00                                RESULT.
+
+000000e0 <__c.1999>:
+      e0:	52 45 53 55 4c 54 00                                RESULT.
+
+000000e7 <__c.1995>:
+      e7:	53 45 4e 53 45 00                                   SENSE.
+
+000000ed <__c.1993>:
+      ed:	2b 49 4e 54 30 20 00                                +INT0 .
+
+000000f4 <__c.1980>:
+      f4:	2b 43 48 52 4e 00                                   +CHRN.
+
+000000fa <__c.1966>:
+      fa:	4c 4f 57 00                                         LOW.
+
+000000fe <__c.1964>:
+      fe:	48 49 47 48 00                                      HIGH.
+
+00000103 <__c.1962>:
+     103:	2b 44 45 4e 53 49 54 59 20 00                       +DENSITY .
+
+0000010d <__c.1948>:
+     10d:	46 41 49 4c 45 44 20 46 4f 52 43 45 2d 52 45 53     FAILED FORCE-RES
+     11d:	45 54 00                                            ET.
+
+00000120 <__c.1946>:
+     120:	53 55 43 43 45 45 44 45 44 00                       SUCCEEDED.
+
+0000012a <__c.1944>:
+     12a:	2b 52 45 41 44 49 44 20 00                          +READID .
+
+00000133 <__c.1902>:
+     133:	2b 53 45 4e 53 45 20 00                             +SENSE .
+
+0000013b <__c.1860>:
+     13b:	2b 44 45 56 49 43 45 20 00                          +DEVICE .
+
+00000144 <__c.1842>:
+     144:	2b 44 52 20 57 52 49 54 45 20 00                    +DR WRITE .
+
+0000014f <__c.1830>:
+     14f:	2b 4f 52 20 57 52 49 54 45 20 00                    +OR WRITE .
+
+0000015a <__c.1802>:
+     15a:	2b 50 43 41 54 00                                   +PCAT.
+
+00000160 <__c.1781>:
+     160:	2b 42 41 53 45 00                                   +BASE.
+
+00000166 <base64chars>:
+     166:	41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50     ABCDEFGHIJKLMNOP
+     176:	51 52 53 54 55 56 57 58 59 5a 61 62 63 64 65 66     QRSTUVWXYZabcdef
+     186:	67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76     ghijklmnopqrstuv
+     196:	77 78 79 7a 30 31 32 33 34 35 36 37 38 39 2b 2f     wxyz0123456789+/
+	...
+
+000001a7 <__c.1778>:
+     1a7:	43 4f 4d 4d 41 4e 44 00                             COMMAND.
+
+000001af <__c.1775>:
+     1af:	46 53 43 48 52 4e 00                                FSCHRN.
+
+000001b6 <__c.1772>:
+     1b6:	46 48 49 44 45 4e 00                                FHIDEN.
+
+000001bd <__c.1770>:
+     1bd:	46 43 4d 44 30 41 00                                FCMD0A.
+
+000001c4 <__c.1768>:
+     1c4:	46 57 52 43 52 52 00                                FWRCRR.
+
+000001cb <__c.1766>:
+     1cb:	46 57 52 44 4f 52 00                                FWRDOR.
+
+000001d2 <__c.1764>:
+     1d2:	46 43 4d 44 30 46 00                                FCMD0F.
+
+000001d9 <__c.1762>:
+     1d9:	46 41 54 52 53 54 00                                FATRST.
+
+000001e0 <__c.1754>:
+     1e0:	41 52 47 56 00                                      ARGV.
+
+000001e5 <__c.1752>:
+     1e5:	53 59 4e 54 41 58 00                                SYNTAX.
+
+000001ec <__c.1750>:
+     1ec:	2b 57 45 4c 43 4f 4d 45 00                          +WELCOME.
+
+000001f5 <__c.1748>:
+     1f5:	43 4f 4e 4e 45 43 54 45 44 00                       CONNECTED.
+
+000001ff <__c.1746>:
+     1ff:	20 00                                                .
+
+00000201 <__c.1743>:
+     201:	2b 49 4e 56 41 4c 49 44 20 00                       +INVALID .
+
+0000020b <__c.1527>:
+     20b:	2b 4d 41 53 54 45 52 0d 0a 00 00                    +MASTER....
+
+00000216 <__ctors_end>:
+     216:	11 24       	eor	r1, r1
+     218:	1f be       	out	0x3f, r1	; 63
+     21a:	cf ef       	ldi	r28, 0xFF	; 255
+     21c:	d8 e0       	ldi	r29, 0x08	; 8
+     21e:	de bf       	out	0x3e, r29	; 62
+     220:	cd bf       	out	0x3d, r28	; 61
+
+00000222 <__do_clear_bss>:
+     222:	11 e0       	ldi	r17, 0x01	; 1
+     224:	a0 e0       	ldi	r26, 0x00	; 0
+     226:	b1 e0       	ldi	r27, 0x01	; 1
+     228:	01 c0       	rjmp	.+2      	; 0x22c <.do_clear_bss_start>
+
+0000022a <.do_clear_bss_loop>:
+     22a:	1d 92       	st	X+, r1
+
+0000022c <.do_clear_bss_start>:
+     22c:	a1 38       	cpi	r26, 0x81	; 129
+     22e:	b1 07       	cpc	r27, r17
+     230:	e1 f7       	brne	.-8      	; 0x22a <.do_clear_bss_loop>
+     232:	0e 94 1f 01 	call	0x23e	; 0x23e <main>
+     236:	0c 94 be 08 	jmp	0x117c	; 0x117c <_exit>
+
+0000023a <__bad_interrupt>:
+     23a:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000023e <main>:
+volatile uint8_t timer_timeout;
+
+//シェルモード
+volatile uint8_t uart_shell_enable;
+
+int main(){
+     23e:	1f 93       	push	r17
+
+
+    //JTAG停止
+    MCUCR |= 0x80;
+     240:	85 b7       	in	r24, 0x35	; 53
+     242:	80 68       	ori	r24, 0x80	; 128
+     244:	85 bf       	out	0x35, r24	; 53
+    MCUCR |= 0x80;
+     246:	85 b7       	in	r24, 0x35	; 53
+     248:	80 68       	ori	r24, 0x80	; 128
+     24a:	85 bf       	out	0x35, r24	; 53
+
+
+    // Turn on USART hardware (RX, TX)
+    UCSR0B = _BV(RXEN0) | _BV(TXEN0);   /* Enable RX and TX */
+     24c:	88 e1       	ldi	r24, 0x18	; 24
+     24e:	80 93 c1 00 	sts	0x00C1, r24
+
+    // 8 bit char sizes
+    UCSR0C = _BV(UCSZ01) | _BV(UCSZ00); /* 8-bit data */
+     252:	86 e0       	ldi	r24, 0x06	; 6
+     254:	80 93 c2 00 	sts	0x00C2, r24
+
+    // Enable the USART Receive interrupt
+	UCSR0B |= (1 << RXCIE0 );
+     258:	80 91 c1 00 	lds	r24, 0x00C1
+     25c:	80 68       	ori	r24, 0x80	; 128
+     25e:	80 93 c1 00 	sts	0x00C1, r24
+
+    //倍速禁止
+	UCSR0A &= ~(_BV(U2X0));
+     262:	80 91 c0 00 	lds	r24, 0x00C0
+     266:	8d 7f       	andi	r24, 0xFD	; 253
+     268:	80 93 c0 00 	sts	0x00C0, r24
+
+    //115200bps
+    UBRR0H = 0x00;
+     26c:	10 92 c5 00 	sts	0x00C5, r1
+    UBRR0L = 0x13;
+     270:	83 e1       	ldi	r24, 0x13	; 19
+     272:	80 93 c4 00 	sts	0x00C4, r24
+
+    //立ち上がり割り込み
+    EICRA = _BV(ISC00)|_BV(ISC01)|_BV(ISC10)|_BV(ISC11);
+     276:	8f e0       	ldi	r24, 0x0F	; 15
+     278:	80 93 69 00 	sts	0x0069, r24
+    EIMSK |= _BV(INT1)|_BV(INT0);
+     27c:	8d b3       	in	r24, 0x1d	; 29
+     27e:	83 60       	ori	r24, 0x03	; 3
+     280:	8d bb       	out	0x1d, r24	; 29
+
+
+	SPCR = _BV(SPE);       /* SPI許可, SLAVE, fosc / 4 */
+     282:	80 e4       	ldi	r24, 0x40	; 64
+     284:	8c bd       	out	0x2c, r24	; 44
+	SPSR = 0x00;
+     286:	1d bc       	out	0x2d, r1	; 45
+
+	//主CPU INT6
+    DDRB  = 0xFF;
+     288:	8f ef       	ldi	r24, 0xFF	; 255
+     28a:	84 b9       	out	0x04, r24	; 4
+    PORTB = 0x00;
+     28c:	15 b8       	out	0x05, r1	; 5
+
+	//半分だけ出力
+    DDRD  = 0xF0;
+     28e:	80 ef       	ldi	r24, 0xF0	; 240
+     290:	8a b9       	out	0x0a, r24	; 10
+	//主CPU INT1以外上げる
+	PORTD = _BV(PD4)|_BV(PD5)|_BV(PD7);
+     292:	80 eb       	ldi	r24, 0xB0	; 176
+     294:	8b b9       	out	0x0b, r24	; 11
+
+	timer_timeout = 5;
+     296:	85 e0       	ldi	r24, 0x05	; 5
+     298:	80 93 0a 01 	sts	0x010A, r24
+
+	sei();
+     29c:	78 94       	sei
+
+
+
+	spi_master(1);
+     29e:	81 e0       	ldi	r24, 0x01	; 1
+     2a0:	0e 94 21 08 	call	0x1042	; 0x1042 <spi_master>
+	spi_leds_set(0xFF);
+     2a4:	8f ef       	ldi	r24, 0xFF	; 255
+     2a6:	0e 94 c7 07 	call	0xf8e	; 0xf8e <spi_leds_set>
+	spi_master(0);
+     2aa:	80 e0       	ldi	r24, 0x00	; 0
+     2ac:	0e 94 21 08 	call	0x1042	; 0x1042 <spi_master>
+
+
+	//リセットする
+	fdc_hardreset();
+     2b0:	0e 94 d6 03 	call	0x7ac	; 0x7ac <fdc_hardreset>
+	fdc_pcatreset();
+     2b4:	0e 94 00 06 	call	0xc00	; 0xc00 <fdc_pcatreset>
+
+	//モーターON
+	fdc_write_do(0x1C);
+     2b8:	8c e1       	ldi	r24, 0x1C	; 28
+     2ba:	0e 94 4a 04 	call	0x894	; 0x894 <fdc_write_do>
+
+	//ドライブ状態取得
+	fdc_exec_04(0x00);
+     2be:	80 e0       	ldi	r24, 0x00	; 0
+     2c0:	0e 94 a8 05 	call	0xb50	; 0xb50 <fdc_exec_04>
+
+
+	//ヘッド位置を0に戻す
+	fdc_exec_07(0x00);
+     2c4:	80 e0       	ldi	r24, 0x00	; 0
+     2c6:	0e 94 78 05 	call	0xaf0	; 0xaf0 <fdc_exec_07>
+	for(;;){
+		if(fdc_command == 0x00) break;
+     2ca:	80 91 08 01 	lds	r24, 0x0108
+     2ce:	88 23       	and	r24, r24
+     2d0:	e1 f7       	brne	.-8      	; 0x2ca <main+0x8c>
+	}
+	uart_putsP(PSTR("+SPECIFY\r\n"), 10);
+     2d2:	87 e8       	ldi	r24, 0x87	; 135
+     2d4:	90 e0       	ldi	r25, 0x00	; 0
+     2d6:	6a e0       	ldi	r22, 0x0A	; 10
+     2d8:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+	//fdc_write_cr(0x02);
+	//fdc_exec_0A(0x44);
+
+
+	//モーター停止
+	fdc_write_do(4+8);
+     2dc:	8c e0       	ldi	r24, 0x0C	; 12
+     2de:	0e 94 4a 04 	call	0x894	; 0x894 <fdc_write_do>
+
+
+    //SRAMモード設定
+	spi_master(1);
+     2e2:	81 e0       	ldi	r24, 0x01	; 1
+     2e4:	0e 94 21 08 	call	0x1042	; 0x1042 <spi_master>
+	spi_leds_set(0x08);
+     2e8:	88 e0       	ldi	r24, 0x08	; 8
+     2ea:	0e 94 c7 07 	call	0xf8e	; 0xf8e <spi_leds_set>
+	spi_sram_resister_write(0x40);
+     2ee:	80 e4       	ldi	r24, 0x40	; 64
+     2f0:	90 e0       	ldi	r25, 0x00	; 0
+     2f2:	0e 94 07 08 	call	0x100e	; 0x100e <spi_sram_resister_write>
+	uart_putsP(PSTR("+SRAM REG "), 10);
+     2f6:	8c e7       	ldi	r24, 0x7C	; 124
+     2f8:	90 e0       	ldi	r25, 0x00	; 0
+     2fa:	6a e0       	ldi	r22, 0x0A	; 10
+     2fc:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+	uart_itoh(spi_sram_resister_read());
+     300:	0e 94 14 08 	call	0x1028	; 0x1028 <spi_sram_resister_read>
+     304:	0e 94 23 02 	call	0x446	; 0x446 <uart_itoh>
+	uart_putnewline();
+     308:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+	spi_master(0);
+     30c:	80 e0       	ldi	r24, 0x00	; 0
+     30e:	0e 94 21 08 	call	0x1042	; 0x1042 <spi_master>
+
+	spi_sram_rewind();
+     312:	0e 94 f8 07 	call	0xff0	; 0xff0 <spi_sram_rewind>
+	uart_sram_write_raw(0x08UL);
+     316:	68 e0       	ldi	r22, 0x08	; 8
+     318:	70 e0       	ldi	r23, 0x00	; 0
+     31a:	80 e0       	ldi	r24, 0x00	; 0
+     31c:	90 e0       	ldi	r25, 0x00	; 0
+     31e:	0e 94 ec 02 	call	0x5d8	; 0x5d8 <uart_sram_write_raw>
+	uart_sram_read_hex(0x10UL);
+     322:	60 e1       	ldi	r22, 0x10	; 16
+     324:	70 e0       	ldi	r23, 0x00	; 0
+     326:	80 e0       	ldi	r24, 0x00	; 0
+     328:	90 e0       	ldi	r25, 0x00	; 0
+     32a:	0e 94 b8 02 	call	0x570	; 0x570 <uart_sram_read_hex>
+
+	uart_shell_enable = 1;
+     32e:	81 e0       	ldi	r24, 0x01	; 1
+     330:	80 93 10 01 	sts	0x0110, r24
+
+
+	for(;;){
+		if(uart_shell_enable == 2) {
+			shell_exec();
+			uart_shell_enable = 1;
+     334:	11 e0       	ldi	r17, 0x01	; 1
+
+	uart_shell_enable = 1;
+
+
+	for(;;){
+		if(uart_shell_enable == 2) {
+     336:	80 91 10 01 	lds	r24, 0x0110
+     33a:	82 30       	cpi	r24, 0x02	; 2
+     33c:	21 f4       	brne	.+8      	; 0x346 <main+0x108>
+			shell_exec();
+     33e:	0e 94 ba 06 	call	0xd74	; 0xd74 <shell_exec>
+			uart_shell_enable = 1;
+     342:	10 93 10 01 	sts	0x0110, r17
+		}
+		if(uart_shell_enable == 3) {
+     346:	80 91 10 01 	lds	r24, 0x0110
+     34a:	83 30       	cpi	r24, 0x03	; 3
+     34c:	a1 f7       	brne	.-24     	; 0x336 <main+0xf8>
+			uart_shell_enable = 1;
+     34e:	10 93 10 01 	sts	0x0110, r17
+     352:	f1 cf       	rjmp	.-30     	; 0x336 <main+0xf8>
+
+00000354 <uart_putchar>:
+volatile uint32_t spi_sram_addr;
+volatile uint16_t spi_sram_crc;
+
+
+//1文字送信
+void uart_putchar(char c) {
+     354:	98 2f       	mov	r25, r24
+
+    // Enable the USART Receive interrupt
+	UCSR0B &= ~(1 << RXCIE0 );
+     356:	80 91 c1 00 	lds	r24, 0x00C1
+     35a:	8f 77       	andi	r24, 0x7F	; 127
+     35c:	80 93 c1 00 	sts	0x00C1, r24
+
+    loop_until_bit_is_set(UCSR0A, UDRE0); /* Wait until data register empty. */
+     360:	80 91 c0 00 	lds	r24, 0x00C0
+     364:	85 ff       	sbrs	r24, 5
+     366:	fc cf       	rjmp	.-8      	; 0x360 <uart_putchar+0xc>
+    UDR0 = c;
+     368:	90 93 c6 00 	sts	0x00C6, r25
+    loop_until_bit_is_set(UCSR0A, TXC0); /* Wait until transmission ready. */
+     36c:	80 91 c0 00 	lds	r24, 0x00C0
+     370:	86 ff       	sbrs	r24, 6
+     372:	fc cf       	rjmp	.-8      	; 0x36c <uart_putchar+0x18>
+
+	UCSR0B |= (1 << RXCIE0 );
+     374:	80 91 c1 00 	lds	r24, 0x00C1
+     378:	80 68       	ori	r24, 0x80	; 128
+     37a:	80 93 c1 00 	sts	0x00C1, r24
+}
+     37e:	08 95       	ret
+
+00000380 <uart_putsP>:
+
+//PGMから送信
+void uart_putsP(const char *data, uint8_t len) {
+     380:	fc 01       	movw	r30, r24
+     382:	90 e0       	ldi	r25, 0x00	; 0
+     384:	17 c0       	rjmp	.+46     	; 0x3b4 <uart_putsP+0x34>
+	uint8_t i;
+	for (i = 0; i < len; i++) {
+		uart_putchar(pgm_read_byte(data+i));
+     386:	24 91       	lpm	r18, Z+
+
+//1文字送信
+void uart_putchar(char c) {
+
+    // Enable the USART Receive interrupt
+	UCSR0B &= ~(1 << RXCIE0 );
+     388:	80 91 c1 00 	lds	r24, 0x00C1
+     38c:	8f 77       	andi	r24, 0x7F	; 127
+     38e:	80 93 c1 00 	sts	0x00C1, r24
+
+    loop_until_bit_is_set(UCSR0A, UDRE0); /* Wait until data register empty. */
+     392:	80 91 c0 00 	lds	r24, 0x00C0
+     396:	85 ff       	sbrs	r24, 5
+     398:	fc cf       	rjmp	.-8      	; 0x392 <uart_putsP+0x12>
+    UDR0 = c;
+     39a:	20 93 c6 00 	sts	0x00C6, r18
+    loop_until_bit_is_set(UCSR0A, TXC0); /* Wait until transmission ready. */
+     39e:	80 91 c0 00 	lds	r24, 0x00C0
+     3a2:	86 ff       	sbrs	r24, 6
+     3a4:	fc cf       	rjmp	.-8      	; 0x39e <uart_putsP+0x1e>
+
+	UCSR0B |= (1 << RXCIE0 );
+     3a6:	80 91 c1 00 	lds	r24, 0x00C1
+     3aa:	80 68       	ori	r24, 0x80	; 128
+     3ac:	80 93 c1 00 	sts	0x00C1, r24
+}
+
+//PGMから送信
+void uart_putsP(const char *data, uint8_t len) {
+	uint8_t i;
+	for (i = 0; i < len; i++) {
+     3b0:	9f 5f       	subi	r25, 0xFF	; 255
+     3b2:	31 96       	adiw	r30, 0x01	; 1
+     3b4:	96 17       	cp	r25, r22
+     3b6:	38 f3       	brcs	.-50     	; 0x386 <uart_putsP+0x6>
+		uart_putchar(pgm_read_byte(data+i));
+	};
+}
+     3b8:	08 95       	ret
+
+000003ba <uart_putnewline>:
+
+//1文字送信
+void uart_putchar(char c) {
+
+    // Enable the USART Receive interrupt
+	UCSR0B &= ~(1 << RXCIE0 );
+     3ba:	80 91 c1 00 	lds	r24, 0x00C1
+     3be:	8f 77       	andi	r24, 0x7F	; 127
+     3c0:	80 93 c1 00 	sts	0x00C1, r24
+
+    loop_until_bit_is_set(UCSR0A, UDRE0); /* Wait until data register empty. */
+     3c4:	80 91 c0 00 	lds	r24, 0x00C0
+     3c8:	85 ff       	sbrs	r24, 5
+     3ca:	fc cf       	rjmp	.-8      	; 0x3c4 <uart_putnewline+0xa>
+    UDR0 = c;
+     3cc:	8d e0       	ldi	r24, 0x0D	; 13
+     3ce:	80 93 c6 00 	sts	0x00C6, r24
+    loop_until_bit_is_set(UCSR0A, TXC0); /* Wait until transmission ready. */
+     3d2:	80 91 c0 00 	lds	r24, 0x00C0
+     3d6:	86 ff       	sbrs	r24, 6
+     3d8:	fc cf       	rjmp	.-8      	; 0x3d2 <uart_putnewline+0x18>
+
+	UCSR0B |= (1 << RXCIE0 );
+     3da:	80 91 c1 00 	lds	r24, 0x00C1
+     3de:	80 68       	ori	r24, 0x80	; 128
+     3e0:	80 93 c1 00 	sts	0x00C1, r24
+
+//1文字送信
+void uart_putchar(char c) {
+
+    // Enable the USART Receive interrupt
+	UCSR0B &= ~(1 << RXCIE0 );
+     3e4:	80 91 c1 00 	lds	r24, 0x00C1
+     3e8:	8f 77       	andi	r24, 0x7F	; 127
+     3ea:	80 93 c1 00 	sts	0x00C1, r24
+
+    loop_until_bit_is_set(UCSR0A, UDRE0); /* Wait until data register empty. */
+     3ee:	80 91 c0 00 	lds	r24, 0x00C0
+     3f2:	85 ff       	sbrs	r24, 5
+     3f4:	fc cf       	rjmp	.-8      	; 0x3ee <uart_putnewline+0x34>
+    UDR0 = c;
+     3f6:	8a e0       	ldi	r24, 0x0A	; 10
+     3f8:	80 93 c6 00 	sts	0x00C6, r24
+    loop_until_bit_is_set(UCSR0A, TXC0); /* Wait until transmission ready. */
+     3fc:	80 91 c0 00 	lds	r24, 0x00C0
+     400:	86 ff       	sbrs	r24, 6
+     402:	fc cf       	rjmp	.-8      	; 0x3fc <uart_putnewline+0x42>
+
+	UCSR0B |= (1 << RXCIE0 );
+     404:	80 91 c1 00 	lds	r24, 0x00C1
+     408:	80 68       	ori	r24, 0x80	; 128
+     40a:	80 93 c1 00 	sts	0x00C1, r24
+
+//改行を送信
+void uart_putnewline() {
+		uart_putchar('\r');
+		uart_putchar('\n');
+}
+     40e:	08 95       	ret
+
+00000410 <uart_puts>:
+
+//RAMから送信
+void uart_puts(char *str) {
+     410:	fc 01       	movw	r30, r24
+     412:	15 c0       	rjmp	.+42     	; 0x43e <uart_puts+0x2e>
+
+//1文字送信
+void uart_putchar(char c) {
+
+    // Enable the USART Receive interrupt
+	UCSR0B &= ~(1 << RXCIE0 );
+     414:	80 91 c1 00 	lds	r24, 0x00C1
+     418:	8f 77       	andi	r24, 0x7F	; 127
+     41a:	80 93 c1 00 	sts	0x00C1, r24
+
+    loop_until_bit_is_set(UCSR0A, UDRE0); /* Wait until data register empty. */
+     41e:	80 91 c0 00 	lds	r24, 0x00C0
+     422:	85 ff       	sbrs	r24, 5
+     424:	fc cf       	rjmp	.-8      	; 0x41e <uart_puts+0xe>
+    UDR0 = c;
+     426:	90 93 c6 00 	sts	0x00C6, r25
+    loop_until_bit_is_set(UCSR0A, TXC0); /* Wait until transmission ready. */
+     42a:	80 91 c0 00 	lds	r24, 0x00C0
+     42e:	86 ff       	sbrs	r24, 6
+     430:	fc cf       	rjmp	.-8      	; 0x42a <uart_puts+0x1a>
+
+	UCSR0B |= (1 << RXCIE0 );
+     432:	80 91 c1 00 	lds	r24, 0x00C1
+     436:	80 68       	ori	r24, 0x80	; 128
+     438:	80 93 c1 00 	sts	0x00C1, r24
+     43c:	31 96       	adiw	r30, 0x01	; 1
+}
+
+//RAMから送信
+void uart_puts(char *str) {
+    int i = 0;
+    while(str[i] != '\0') { // Loop through string, sending each character
+     43e:	90 81       	ld	r25, Z
+     440:	99 23       	and	r25, r25
+     442:	41 f7       	brne	.-48     	; 0x414 <uart_puts+0x4>
+        uart_putchar(str[i]);
+        i++;
+    }
+}
+     444:	08 95       	ret
+
+00000446 <uart_itoh>:
+
+
+
+//16進2桁を出力
+void uart_itoh(unsigned char value)
+{
+     446:	df 93       	push	r29
+     448:	cf 93       	push	r28
+     44a:	00 d0       	rcall	.+0      	; 0x44c <uart_itoh+0x6>
+     44c:	cd b7       	in	r28, 0x3d	; 61
+     44e:	de b7       	in	r29, 0x3e	; 62
+     450:	98 2f       	mov	r25, r24
+	char scratch[2] = {'0', '0'};
+     452:	80 e3       	ldi	r24, 0x30	; 48
+     454:	89 83       	std	Y+1, r24	; 0x01
+     456:	8a 83       	std	Y+2, r24	; 0x02
+	int offset = 1;
+	uint8_t c;
+	uint8_t accum;
+
+	if(value != 0)
+     458:	99 23       	and	r25, r25
+     45a:	81 f0       	breq	.+32     	; 0x47c <uart_itoh+0x36>
+     45c:	fe 01       	movw	r30, r28
+     45e:	32 96       	adiw	r30, 0x02	; 2
+     460:	89 2f       	mov	r24, r25
+	{
+		accum = value;
+		while(accum) {
+			c = accum % 16;
+     462:	98 2f       	mov	r25, r24
+     464:	9f 70       	andi	r25, 0x0F	; 15
+			if(c < 10) {
+     466:	9a 30       	cpi	r25, 0x0A	; 10
+     468:	10 f4       	brcc	.+4      	; 0x46e <uart_itoh+0x28>
+				c += '0';
+     46a:	90 5d       	subi	r25, 0xD0	; 208
+     46c:	01 c0       	rjmp	.+2      	; 0x470 <uart_itoh+0x2a>
+			}else{
+				c += 'A' - 10;
+     46e:	99 5c       	subi	r25, 0xC9	; 201
+			}
+			scratch[offset] = c;
+     470:	90 83       	st	Z, r25
+			accum /= 16;
+     472:	82 95       	swap	r24
+     474:	8f 70       	andi	r24, 0x0F	; 15
+     476:	31 97       	sbiw	r30, 0x01	; 1
+	uint8_t accum;
+
+	if(value != 0)
+	{
+		accum = value;
+		while(accum) {
+     478:	88 23       	and	r24, r24
+     47a:	99 f7       	brne	.-26     	; 0x462 <uart_itoh+0x1c>
+			offset--;
+		}
+		offset++;
+	}
+
+	uart_putchar(scratch[0]);		
+     47c:	99 81       	ldd	r25, Y+1	; 0x01
+
+//1文字送信
+void uart_putchar(char c) {
+
+    // Enable the USART Receive interrupt
+	UCSR0B &= ~(1 << RXCIE0 );
+     47e:	80 91 c1 00 	lds	r24, 0x00C1
+     482:	8f 77       	andi	r24, 0x7F	; 127
+     484:	80 93 c1 00 	sts	0x00C1, r24
+
+    loop_until_bit_is_set(UCSR0A, UDRE0); /* Wait until data register empty. */
+     488:	80 91 c0 00 	lds	r24, 0x00C0
+     48c:	85 ff       	sbrs	r24, 5
+     48e:	fc cf       	rjmp	.-8      	; 0x488 <uart_itoh+0x42>
+    UDR0 = c;
+     490:	90 93 c6 00 	sts	0x00C6, r25
+    loop_until_bit_is_set(UCSR0A, TXC0); /* Wait until transmission ready. */
+     494:	80 91 c0 00 	lds	r24, 0x00C0
+     498:	86 ff       	sbrs	r24, 6
+     49a:	fc cf       	rjmp	.-8      	; 0x494 <uart_itoh+0x4e>
+
+	UCSR0B |= (1 << RXCIE0 );
+     49c:	80 91 c1 00 	lds	r24, 0x00C1
+     4a0:	80 68       	ori	r24, 0x80	; 128
+     4a2:	80 93 c1 00 	sts	0x00C1, r24
+		}
+		offset++;
+	}
+
+	uart_putchar(scratch[0]);		
+	uart_putchar(scratch[1]);
+     4a6:	9a 81       	ldd	r25, Y+2	; 0x02
+
+//1文字送信
+void uart_putchar(char c) {
+
+    // Enable the USART Receive interrupt
+	UCSR0B &= ~(1 << RXCIE0 );
+     4a8:	80 91 c1 00 	lds	r24, 0x00C1
+     4ac:	8f 77       	andi	r24, 0x7F	; 127
+     4ae:	80 93 c1 00 	sts	0x00C1, r24
+
+    loop_until_bit_is_set(UCSR0A, UDRE0); /* Wait until data register empty. */
+     4b2:	80 91 c0 00 	lds	r24, 0x00C0
+     4b6:	85 ff       	sbrs	r24, 5
+     4b8:	fc cf       	rjmp	.-8      	; 0x4b2 <uart_itoh+0x6c>
+    UDR0 = c;
+     4ba:	90 93 c6 00 	sts	0x00C6, r25
+    loop_until_bit_is_set(UCSR0A, TXC0); /* Wait until transmission ready. */
+     4be:	80 91 c0 00 	lds	r24, 0x00C0
+     4c2:	86 ff       	sbrs	r24, 6
+     4c4:	fc cf       	rjmp	.-8      	; 0x4be <uart_itoh+0x78>
+
+	UCSR0B |= (1 << RXCIE0 );
+     4c6:	80 91 c1 00 	lds	r24, 0x00C1
+     4ca:	80 68       	ori	r24, 0x80	; 128
+     4cc:	80 93 c1 00 	sts	0x00C1, r24
+		offset++;
+	}
+
+	uart_putchar(scratch[0]);		
+	uart_putchar(scratch[1]);
+}
+     4d0:	0f 90       	pop	r0
+     4d2:	0f 90       	pop	r0
+     4d4:	cf 91       	pop	r28
+     4d6:	df 91       	pop	r29
+     4d8:	08 95       	ret
+
+000004da <uart_sram_write_hex>:
+
+
+
+//SRAM操作(クリティカル)
+void uart_sram_write_hex(uint32_t size) {
+}
+     4da:	08 95       	ret
+
+000004dc <__vector_20>:
+}
+
+
+
+ISR (USART0_RX_vect)
+{
+     4dc:	1f 92       	push	r1
+     4de:	0f 92       	push	r0
+     4e0:	0f b6       	in	r0, 0x3f	; 63
+     4e2:	0f 92       	push	r0
+     4e4:	11 24       	eor	r1, r1
+     4e6:	2f 93       	push	r18
+     4e8:	3f 93       	push	r19
+     4ea:	4f 93       	push	r20
+     4ec:	5f 93       	push	r21
+     4ee:	6f 93       	push	r22
+     4f0:	7f 93       	push	r23
+     4f2:	8f 93       	push	r24
+     4f4:	9f 93       	push	r25
+     4f6:	af 93       	push	r26
+     4f8:	bf 93       	push	r27
+     4fa:	ef 93       	push	r30
+     4fc:	ff 93       	push	r31
+    // Get data from the USART in register
+    uart_shell_buffer[uart_shell_length] = UDR0;
+     4fe:	90 91 00 01 	lds	r25, 0x0100
+     502:	a9 2f       	mov	r26, r25
+     504:	b0 e0       	ldi	r27, 0x00	; 0
+     506:	80 91 c6 00 	lds	r24, 0x00C6
+     50a:	fd 01       	movw	r30, r26
+     50c:	ef 5e       	subi	r30, 0xEF	; 239
+     50e:	fe 4f       	sbci	r31, 0xFE	; 254
+     510:	80 83       	st	Z, r24
+
+    // End of line!
+    if (uart_shell_buffer[uart_shell_length] == '\r' || uart_shell_buffer[uart_shell_length] == '\n') {
+     512:	80 81       	ld	r24, Z
+     514:	8d 30       	cpi	r24, 0x0D	; 13
+     516:	19 f0       	breq	.+6      	; 0x51e <__vector_20+0x42>
+     518:	80 81       	ld	r24, Z
+     51a:	8a 30       	cpi	r24, 0x0A	; 10
+     51c:	59 f4       	brne	.+22     	; 0x534 <__vector_20+0x58>
+
+		uart_shell_buffer[uart_shell_length] = '\0'; 
+     51e:	af 5e       	subi	r26, 0xEF	; 239
+     520:	be 4f       	sbci	r27, 0xFE	; 254
+     522:	1c 92       	st	X, r1
+
+		if(uart_shell_length > 0) {
+     524:	99 23       	and	r25, r25
+     526:	99 f0       	breq	.+38     	; 0x54e <__vector_20+0x72>
+
+	        // Reset to 0, ready to go again
+	        uart_shell_length = 0;
+     528:	10 92 00 01 	sts	0x0100, r1
+	        uart_shell_enable = 2;
+     52c:	82 e0       	ldi	r24, 0x02	; 2
+     52e:	80 93 10 01 	sts	0x0110, r24
+     532:	0d c0       	rjmp	.+26     	; 0x54e <__vector_20+0x72>
+			return;
+		}
+
+    } else {
+		if(uart_shell_length < 79) {
+     534:	9f 34       	cpi	r25, 0x4F	; 79
+     536:	20 f4       	brcc	.+8      	; 0x540 <__vector_20+0x64>
+	        uart_shell_length++;
+     538:	9f 5f       	subi	r25, 0xFF	; 255
+     53a:	90 93 00 01 	sts	0x0100, r25
+     53e:	07 c0       	rjmp	.+14     	; 0x54e <__vector_20+0x72>
+		}else{
+			uart_putsP(PSTR("+UART OVERFLOW"), 14);
+     540:	82 e9       	ldi	r24, 0x92	; 146
+     542:	90 e0       	ldi	r25, 0x00	; 0
+     544:	6e e0       	ldi	r22, 0x0E	; 14
+     546:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+			uart_putnewline();
+     54a:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+		}
+    }
+}
+     54e:	ff 91       	pop	r31
+     550:	ef 91       	pop	r30
+     552:	bf 91       	pop	r27
+     554:	af 91       	pop	r26
+     556:	9f 91       	pop	r25
+     558:	8f 91       	pop	r24
+     55a:	7f 91       	pop	r23
+     55c:	6f 91       	pop	r22
+     55e:	5f 91       	pop	r21
+     560:	4f 91       	pop	r20
+     562:	3f 91       	pop	r19
+     564:	2f 91       	pop	r18
+     566:	0f 90       	pop	r0
+     568:	0f be       	out	0x3f, r0	; 63
+     56a:	0f 90       	pop	r0
+     56c:	1f 90       	pop	r1
+     56e:	18 95       	reti
+
+00000570 <uart_sram_read_hex>:
+
+
+}
+
+//SRAM操作(クリティカル)
+void uart_sram_read_hex(unsigned long size) {
+     570:	af 92       	push	r10
+     572:	bf 92       	push	r11
+     574:	cf 92       	push	r12
+     576:	df 92       	push	r13
+     578:	ef 92       	push	r14
+     57a:	ff 92       	push	r15
+     57c:	0f 93       	push	r16
+     57e:	1f 93       	push	r17
+     580:	5b 01       	movw	r10, r22
+     582:	6c 01       	movw	r12, r24
+	//溢れた場合
+	//if(rem > spi_sram_addr) {
+	//	rem = spi_sram_addr;
+	//}
+
+	spi_master(1);
+     584:	81 e0       	ldi	r24, 0x01	; 1
+     586:	0e 94 21 08 	call	0x1042	; 0x1042 <spi_master>
+	spi_sram_start_read(0);
+     58a:	80 e0       	ldi	r24, 0x00	; 0
+     58c:	90 e0       	ldi	r25, 0x00	; 0
+     58e:	0e 94 d0 07 	call	0xfa0	; 0xfa0 <spi_sram_start_read>
+     592:	ee 24       	eor	r14, r14
+     594:	ff 24       	eor	r15, r15
+     596:	87 01       	movw	r16, r14
+     598:	0c c0       	rjmp	.+24     	; 0x5b2 <uart_sram_read_hex+0x42>
+
+	while(total > sent) {
+
+		//ダミー送信
+	    SPDR = 0x00;
+     59a:	1e bc       	out	0x2e, r1	; 46
+	    while(!(SPSR & (1<<SPIF)));
+     59c:	0d b4       	in	r0, 0x2d	; 45
+     59e:	07 fe       	sbrs	r0, 7
+     5a0:	fd cf       	rjmp	.-6      	; 0x59c <uart_sram_read_hex+0x2c>
+	    uart_itoh(SPDR);
+     5a2:	8e b5       	in	r24, 0x2e	; 46
+     5a4:	0e 94 23 02 	call	0x446	; 0x446 <uart_itoh>
+
+//	    uart_itoh(sent);
+		sent++;
+     5a8:	08 94       	sec
+     5aa:	e1 1c       	adc	r14, r1
+     5ac:	f1 1c       	adc	r15, r1
+     5ae:	01 1d       	adc	r16, r1
+     5b0:	11 1d       	adc	r17, r1
+	//}
+
+	spi_master(1);
+	spi_sram_start_read(0);
+
+	while(total > sent) {
+     5b2:	ea 14       	cp	r14, r10
+     5b4:	fb 04       	cpc	r15, r11
+     5b6:	0c 05       	cpc	r16, r12
+     5b8:	1d 05       	cpc	r17, r13
+     5ba:	78 f3       	brcs	.-34     	; 0x59a <uart_sram_read_hex+0x2a>
+
+//	    uart_itoh(sent);
+		sent++;
+	}
+
+	spi_sram_stop();
+     5bc:	0e 94 f6 07 	call	0xfec	; 0xfec <spi_sram_stop>
+	spi_master(0);
+     5c0:	80 e0       	ldi	r24, 0x00	; 0
+     5c2:	0e 94 21 08 	call	0x1042	; 0x1042 <spi_master>
+}
+     5c6:	1f 91       	pop	r17
+     5c8:	0f 91       	pop	r16
+     5ca:	ff 90       	pop	r15
+     5cc:	ef 90       	pop	r14
+     5ce:	df 90       	pop	r13
+     5d0:	cf 90       	pop	r12
+     5d2:	bf 90       	pop	r11
+     5d4:	af 90       	pop	r10
+     5d6:	08 95       	ret
+
+000005d8 <uart_sram_write_raw>:
+//SRAM操作(クリティカル)
+void uart_sram_write_hex(uint32_t size) {
+}
+
+//SRAM操作(クリティカル)
+void uart_sram_write_raw(unsigned long size) {
+     5d8:	af 92       	push	r10
+     5da:	bf 92       	push	r11
+     5dc:	cf 92       	push	r12
+     5de:	df 92       	push	r13
+     5e0:	ef 92       	push	r14
+     5e2:	ff 92       	push	r15
+     5e4:	0f 93       	push	r16
+     5e6:	1f 93       	push	r17
+     5e8:	5b 01       	movw	r10, r22
+     5ea:	6c 01       	movw	r12, r24
+
+	//読み取り済みバイト数
+	unsigned long recieved = 0;
+	unsigned char c;
+
+	uart_putsP(PSTR("+SRAM WRITE BYTES "), 12);
+     5ec:	83 eb       	ldi	r24, 0xB3	; 179
+     5ee:	90 e0       	ldi	r25, 0x00	; 0
+     5f0:	6c e0       	ldi	r22, 0x0C	; 12
+     5f2:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+    uart_itoh((size >> 16) & 0xFF);
+     5f6:	c6 01       	movw	r24, r12
+     5f8:	aa 27       	eor	r26, r26
+     5fa:	bb 27       	eor	r27, r27
+     5fc:	0e 94 23 02 	call	0x446	; 0x446 <uart_itoh>
+    uart_itoh((size >>  8) & 0xFF);
+     600:	bb 27       	eor	r27, r27
+     602:	ad 2d       	mov	r26, r13
+     604:	9c 2d       	mov	r25, r12
+     606:	8b 2d       	mov	r24, r11
+     608:	0e 94 23 02 	call	0x446	; 0x446 <uart_itoh>
+    uart_itoh((size)       & 0xFF);
+     60c:	8a 2d       	mov	r24, r10
+     60e:	0e 94 23 02 	call	0x446	; 0x446 <uart_itoh>
+	uart_putnewline();
+     612:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+
+	spi_master(1);
+     616:	81 e0       	ldi	r24, 0x01	; 1
+     618:	0e 94 21 08 	call	0x1042	; 0x1042 <spi_master>
+	spi_sram_start_write(0UL);
+     61c:	60 e0       	ldi	r22, 0x00	; 0
+     61e:	70 e0       	ldi	r23, 0x00	; 0
+     620:	80 e0       	ldi	r24, 0x00	; 0
+     622:	90 e0       	ldi	r25, 0x00	; 0
+     624:	0e 94 e3 07 	call	0xfc6	; 0xfc6 <spi_sram_start_write>
+
+
+	//割り込み禁止
+	UCSR0B &=~_BV(RXCIE0);
+     628:	80 91 c1 00 	lds	r24, 0x00C1
+     62c:	8f 77       	andi	r24, 0x7F	; 127
+     62e:	80 93 c1 00 	sts	0x00C1, r24
+     632:	ee 24       	eor	r14, r14
+     634:	ff 24       	eor	r15, r15
+     636:	87 01       	movw	r16, r14
+     638:	19 c0       	rjmp	.+50     	; 0x66c <uart_sram_write_raw+0x94>
+
+	while(recieved < size){
+	    loop_until_bit_is_set(UCSR0A, RXC0);
+     63a:	80 91 c0 00 	lds	r24, 0x00C0
+     63e:	87 ff       	sbrs	r24, 7
+     640:	fc cf       	rjmp	.-8      	; 0x63a <uart_sram_write_raw+0x62>
+		c = UDR0;
+     642:	60 91 c6 00 	lds	r22, 0x00C6
+		SPDR = c;
+     646:	6e bd       	out	0x2e, r22	; 46
+		spi_sram_crc = crcByte(spi_sram_crc, c);
+     648:	80 91 61 01 	lds	r24, 0x0161
+     64c:	90 91 62 01 	lds	r25, 0x0162
+     650:	0e 94 99 06 	call	0xd32	; 0xd32 <crcByte>
+     654:	90 93 62 01 	sts	0x0162, r25
+     658:	80 93 61 01 	sts	0x0161, r24
+		//spi_sram_crc = _crc_ccitt_update(spi_sram_crc, c);
+	    while(!(SPSR & (1<<SPIF)));
+     65c:	0d b4       	in	r0, 0x2d	; 45
+     65e:	07 fe       	sbrs	r0, 7
+     660:	fd cf       	rjmp	.-6      	; 0x65c <uart_sram_write_raw+0x84>
+		recieved++;
+     662:	08 94       	sec
+     664:	e1 1c       	adc	r14, r1
+     666:	f1 1c       	adc	r15, r1
+     668:	01 1d       	adc	r16, r1
+     66a:	11 1d       	adc	r17, r1
+
+
+	//割り込み禁止
+	UCSR0B &=~_BV(RXCIE0);
+
+	while(recieved < size){
+     66c:	ea 14       	cp	r14, r10
+     66e:	fb 04       	cpc	r15, r11
+     670:	0c 05       	cpc	r16, r12
+     672:	1d 05       	cpc	r17, r13
+     674:	10 f3       	brcs	.-60     	; 0x63a <uart_sram_write_raw+0x62>
+	    while(!(SPSR & (1<<SPIF)));
+		recieved++;
+	}
+
+	//割り込み許可
+	UCSR0B |= (1 << RXCIE0 );
+     676:	80 91 c1 00 	lds	r24, 0x00C1
+     67a:	80 68       	ori	r24, 0x80	; 128
+     67c:	80 93 c1 00 	sts	0x00C1, r24
+
+	spi_sram_stop();
+     680:	0e 94 f6 07 	call	0xfec	; 0xfec <spi_sram_stop>
+	spi_master(0);
+     684:	80 e0       	ldi	r24, 0x00	; 0
+     686:	0e 94 21 08 	call	0x1042	; 0x1042 <spi_master>
+
+	uart_putsP(PSTR("+SRAM WRITE DONE "), 17);
+     68a:	81 ea       	ldi	r24, 0xA1	; 161
+     68c:	90 e0       	ldi	r25, 0x00	; 0
+     68e:	61 e1       	ldi	r22, 0x11	; 17
+     690:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+    uart_itoh((unsigned char) (spi_sram_crc >> 8) & 0xFF);
+     694:	80 91 61 01 	lds	r24, 0x0161
+     698:	90 91 62 01 	lds	r25, 0x0162
+     69c:	89 2f       	mov	r24, r25
+     69e:	0e 94 23 02 	call	0x446	; 0x446 <uart_itoh>
+    uart_itoh((unsigned char) (spi_sram_crc     ) & 0xFF);
+     6a2:	80 91 61 01 	lds	r24, 0x0161
+     6a6:	90 91 62 01 	lds	r25, 0x0162
+     6aa:	0e 94 23 02 	call	0x446	; 0x446 <uart_itoh>
+
+	uart_putnewline();
+     6ae:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+
+
+}
+     6b2:	1f 91       	pop	r17
+     6b4:	0f 91       	pop	r16
+     6b6:	ff 90       	pop	r15
+     6b8:	ef 90       	pop	r14
+     6ba:	df 90       	pop	r13
+     6bc:	cf 90       	pop	r12
+     6be:	bf 90       	pop	r11
+     6c0:	af 90       	pop	r10
+     6c2:	08 95       	ret
+
+000006c4 <__vector_2>:
+	fdc_command  = 0x00;
+}
+
+//DMA割り込み
+ISR(INT1_vect)
+{
+     6c4:	1f 92       	push	r1
+     6c6:	0f 92       	push	r0
+     6c8:	0f b6       	in	r0, 0x3f	; 63
+     6ca:	0f 92       	push	r0
+     6cc:	11 24       	eor	r1, r1
+     6ce:	2f 93       	push	r18
+     6d0:	3f 93       	push	r19
+     6d2:	4f 93       	push	r20
+     6d4:	5f 93       	push	r21
+     6d6:	6f 93       	push	r22
+     6d8:	7f 93       	push	r23
+     6da:	8f 93       	push	r24
+     6dc:	9f 93       	push	r25
+     6de:	af 93       	push	r26
+     6e0:	bf 93       	push	r27
+     6e2:	ef 93       	push	r30
+     6e4:	ff 93       	push	r31
+    uart_putsP(PSTR("+INT1\r\n"), 7);
+     6e6:	86 ec       	ldi	r24, 0xC6	; 198
+     6e8:	90 e0       	ldi	r25, 0x00	; 0
+     6ea:	67 e0       	ldi	r22, 0x07	; 7
+     6ec:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+}
+     6f0:	ff 91       	pop	r31
+     6f2:	ef 91       	pop	r30
+     6f4:	bf 91       	pop	r27
+     6f6:	af 91       	pop	r26
+     6f8:	9f 91       	pop	r25
+     6fa:	8f 91       	pop	r24
+     6fc:	7f 91       	pop	r23
+     6fe:	6f 91       	pop	r22
+     700:	5f 91       	pop	r21
+     702:	4f 91       	pop	r20
+     704:	3f 91       	pop	r19
+     706:	2f 91       	pop	r18
+     708:	0f 90       	pop	r0
+     70a:	0f be       	out	0x3f, r0	; 63
+     70c:	0f 90       	pop	r0
+     70e:	1f 90       	pop	r1
+     710:	18 95       	reti
+
+00000712 <fdc_set_highden>:
+		fdc_pcatreset();
+	}
+}
+
+
+void fdc_set_highden(unsigned char c){
+     712:	1f 93       	push	r17
+     714:	18 2f       	mov	r17, r24
+
+    uart_putsP(PSTR("+DENSITY "), 9);
+     716:	83 e0       	ldi	r24, 0x03	; 3
+     718:	91 e0       	ldi	r25, 0x01	; 1
+     71a:	69 e0       	ldi	r22, 0x09	; 9
+     71c:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+	if(c) {
+     720:	11 23       	and	r17, r17
+     722:	29 f0       	breq	.+10     	; 0x72e <fdc_set_highden+0x1c>
+		//360rpm
+    	PORTB |= _BV(PB3);
+     724:	2b 9a       	sbi	0x05, 3	; 5
+	    uart_putsP(PSTR("HIGH"), 4);
+     726:	8e ef       	ldi	r24, 0xFE	; 254
+     728:	90 e0       	ldi	r25, 0x00	; 0
+     72a:	64 e0       	ldi	r22, 0x04	; 4
+     72c:	04 c0       	rjmp	.+8      	; 0x736 <fdc_set_highden+0x24>
+		
+	}else{
+		//300rpm
+    	PORTB &= ~_BV(PB3);
+     72e:	2b 98       	cbi	0x05, 3	; 5
+	    uart_putsP(PSTR("LOW"), 3);
+     730:	8a ef       	ldi	r24, 0xFA	; 250
+     732:	90 e0       	ldi	r25, 0x00	; 0
+     734:	63 e0       	ldi	r22, 0x03	; 3
+     736:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+	}
+	uart_putnewline();
+     73a:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+}
+     73e:	1f 91       	pop	r17
+     740:	08 95       	ret
+
+00000742 <fdc_set_chrn>:
+
+
+void fdc_set_chrn(unsigned char c1, unsigned char c2, unsigned char c3, unsigned char c4){
+     742:	cf 93       	push	r28
+     744:	df 93       	push	r29
+
+	int i;
+	fdc_send_chrn[0] = c1;
+     746:	80 93 6b 01 	sts	0x016B, r24
+	fdc_send_chrn[1] = c2;
+     74a:	60 93 6c 01 	sts	0x016C, r22
+	fdc_send_chrn[2] = c3;
+     74e:	40 93 6d 01 	sts	0x016D, r20
+	fdc_send_chrn[3] = c4;
+     752:	20 93 6e 01 	sts	0x016E, r18
+    uart_putsP(PSTR("+CHRN"), 5);
+     756:	84 ef       	ldi	r24, 0xF4	; 244
+     758:	90 e0       	ldi	r25, 0x00	; 0
+     75a:	65 e0       	ldi	r22, 0x05	; 5
+     75c:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+     760:	c0 e0       	ldi	r28, 0x00	; 0
+     762:	d0 e0       	ldi	r29, 0x00	; 0
+	for(i=0; i<4; i++){
+		uart_putchar(' ');
+     764:	80 e2       	ldi	r24, 0x20	; 32
+     766:	0e 94 aa 01 	call	0x354	; 0x354 <uart_putchar>
+		uart_itoh(fdc_send_chrn[i]);		
+     76a:	fe 01       	movw	r30, r28
+     76c:	e5 59       	subi	r30, 0x95	; 149
+     76e:	fe 4f       	sbci	r31, 0xFE	; 254
+     770:	80 81       	ld	r24, Z
+     772:	0e 94 23 02 	call	0x446	; 0x446 <uart_itoh>
+	fdc_send_chrn[0] = c1;
+	fdc_send_chrn[1] = c2;
+	fdc_send_chrn[2] = c3;
+	fdc_send_chrn[3] = c4;
+    uart_putsP(PSTR("+CHRN"), 5);
+	for(i=0; i<4; i++){
+     776:	21 96       	adiw	r28, 0x01	; 1
+     778:	c4 30       	cpi	r28, 0x04	; 4
+     77a:	d1 05       	cpc	r29, r1
+     77c:	99 f7       	brne	.-26     	; 0x764 <fdc_set_chrn+0x22>
+		uart_putchar(' ');
+		uart_itoh(fdc_send_chrn[i]);		
+	}
+	uart_putnewline();
+     77e:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+}
+     782:	df 91       	pop	r29
+     784:	cf 91       	pop	r28
+     786:	08 95       	ret
+
+00000788 <fdc_read_mr>:
+
+
+unsigned char fdc_read_mr(){
+
+	//方向は入力
+	data_in();
+     788:	0e 94 5b 06 	call	0xcb6	; 0xcb6 <data_in>
+
+	//CS下げる
+    PORTC = FDC_LDCR|FDC_LDOR|FDC_RD|FDC_WR|FDC_DACK;
+     78c:	8f e4       	ldi	r24, 0x4F	; 79
+     78e:	88 b9       	out	0x08, r24	; 8
+
+	//RD下げる
+    PORTC &= ~(FDC_RD);
+     790:	42 98       	cbi	0x08, 2	; 8
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     792:	86 e0       	ldi	r24, 0x06	; 6
+     794:	8a 95       	dec	r24
+     796:	f1 f7       	brne	.-4      	; 0x794 <fdc_read_mr+0xc>
+     798:	00 00       	nop
+    _delay_us(1);
+
+    fdc_mr = PINA;
+     79a:	80 b1       	in	r24, 0x00	; 0
+     79c:	80 93 09 01 	sts	0x0109, r24
+
+	//RD上げる
+    PORTC |= FDC_RD|FDC_CS;
+     7a0:	88 b1       	in	r24, 0x08	; 8
+     7a2:	84 61       	ori	r24, 0x14	; 20
+     7a4:	88 b9       	out	0x08, r24	; 8
+    return fdc_mr;
+     7a6:	80 91 09 01 	lds	r24, 0x0109
+}
+     7aa:	08 95       	ret
+
+000007ac <fdc_hardreset>:
+void fdc_hardreset(){
+
+	int i;
+
+	//FDC Outputs
+    DDRC  = 0xFF;
+     7ac:	8f ef       	ldi	r24, 0xFF	; 255
+     7ae:	87 b9       	out	0x07, r24	; 7
+
+	//負論理プルアップ
+    PORTC = FDC_LDCR|FDC_LDOR|FDC_RD|FDC_WR|FDC_CS|FDC_DACK;
+     7b0:	9f e5       	ldi	r25, 0x5F	; 95
+     7b2:	98 b9       	out	0x08, r25	; 8
+
+    //RESET
+    PORTD = _BV(PD7);
+     7b4:	90 e8       	ldi	r25, 0x80	; 128
+     7b6:	9b b9       	out	0x0b, r25	; 11
+     7b8:	96 e0       	ldi	r25, 0x06	; 6
+     7ba:	9a 95       	dec	r25
+     7bc:	f1 f7       	brne	.-4      	; 0x7ba <fdc_hardreset+0xe>
+     7be:	00 00       	nop
+    _delay_us(1);
+    PORTD &= ~_BV(PD7);
+     7c0:	5f 98       	cbi	0x0b, 7	; 11
+     7c2:	ec ec       	ldi	r30, 0xCC	; 204
+     7c4:	f1 e0       	ldi	r31, 0x01	; 1
+     7c6:	31 97       	sbiw	r30, 0x01	; 1
+     7c8:	f1 f7       	brne	.-4      	; 0x7c6 <fdc_hardreset+0x1a>
+     7ca:	00 c0       	rjmp	.+0      	; 0x7cc <fdc_hardreset+0x20>
+     7cc:	00 00       	nop
+    _delay_us(100);
+
+	//ST0リセット
+	for(i=0;i<=3;i++){
+		fdc_st0[i] = 0xFF;
+     7ce:	80 93 0b 01 	sts	0x010B, r24
+     7d2:	80 93 0c 01 	sts	0x010C, r24
+     7d6:	80 93 0d 01 	sts	0x010D, r24
+     7da:	80 93 0e 01 	sts	0x010E, r24
+	}
+
+	//BASEモードに
+	fdc_read_mr();
+     7de:	0e 94 c4 03 	call	0x788	; 0x788 <fdc_read_mr>
+
+	//初期化完了を待つ
+	for(;;){
+		if(((fdc_st0[0]|fdc_st0[1]|fdc_st0[2]|fdc_st0[3]) & 0x04) == 0x00) break;
+     7e2:	30 91 0b 01 	lds	r19, 0x010B
+     7e6:	80 91 0c 01 	lds	r24, 0x010C
+     7ea:	90 91 0d 01 	lds	r25, 0x010D
+     7ee:	20 91 0e 01 	lds	r18, 0x010E
+     7f2:	83 2b       	or	r24, r19
+     7f4:	89 2b       	or	r24, r25
+     7f6:	82 2b       	or	r24, r18
+     7f8:	82 fd       	sbrc	r24, 2
+     7fa:	f3 cf       	rjmp	.-26     	; 0x7e2 <fdc_hardreset+0x36>
+	}
+
+	uart_putsP(PSTR("+BASE"), 5);
+     7fc:	80 e6       	ldi	r24, 0x60	; 96
+     7fe:	91 e0       	ldi	r25, 0x01	; 1
+     800:	65 e0       	ldi	r22, 0x05	; 5
+     802:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+	uart_putnewline();
+     806:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+}
+     80a:	08 95       	ret
+
+0000080c <fdc_read>:
+unsigned char fdc_read(){
+
+	unsigned char c;
+
+	//CS下げる A0上げる
+    PORTC = FDC_LDCR|FDC_LDOR|FDC_RD|FDC_WR|FDC_DACK|FDC_A0;
+     80c:	8f e6       	ldi	r24, 0x6F	; 111
+     80e:	88 b9       	out	0x08, r24	; 8
+
+	//方向は入力
+	data_in();
+     810:	0e 94 5b 06 	call	0xcb6	; 0xcb6 <data_in>
+
+	//RD下げる
+    PORTC &= ~(FDC_RD);
+     814:	42 98       	cbi	0x08, 2	; 8
+     816:	00 c0       	rjmp	.+0      	; 0x818 <fdc_read+0xc>
+     818:	00 c0       	rjmp	.+0      	; 0x81a <fdc_read+0xe>
+    _delay_us(0.2);
+
+    c = PINA;
+     81a:	80 b1       	in	r24, 0x00	; 0
+
+	//RD上げる
+    PORTC |= FDC_RD;
+     81c:	42 9a       	sbi	0x08, 2	; 8
+     81e:	00 c0       	rjmp	.+0      	; 0x820 <fdc_read+0x14>
+     820:	00 c0       	rjmp	.+0      	; 0x822 <fdc_read+0x16>
+    _delay_us(0.2);
+
+	return c;
+}
+     822:	08 95       	ret
+
+00000824 <fdc_loop_until_dio>:
+}
+
+
+void fdc_loop_until_dio(){
+    for(;;) {
+		fdc_read_mr();
+     824:	0e 94 c4 03 	call	0x788	; 0x788 <fdc_read_mr>
+		if((fdc_mr & 0xD0) == 0xD0) break;
+     828:	80 91 09 01 	lds	r24, 0x0109
+     82c:	80 7d       	andi	r24, 0xD0	; 208
+     82e:	80 3d       	cpi	r24, 0xD0	; 208
+     830:	39 f0       	breq	.+14     	; 0x840 <fdc_loop_until_dio+0x1c>
+     832:	8c ec       	ldi	r24, 0xCC	; 204
+     834:	91 e0       	ldi	r25, 0x01	; 1
+     836:	01 97       	sbiw	r24, 0x01	; 1
+     838:	f1 f7       	brne	.-4      	; 0x836 <fdc_loop_until_dio+0x12>
+     83a:	00 c0       	rjmp	.+0      	; 0x83c <fdc_loop_until_dio+0x18>
+     83c:	00 00       	nop
+     83e:	f2 cf       	rjmp	.-28     	; 0x824 <fdc_loop_until_dio>
+     840:	08 95       	ret
+
+00000842 <fdc_loop_until_rqm>:
+volatile unsigned char fdc_command;
+
+
+void fdc_loop_until_rqm(){
+    for(;;) {
+		fdc_read_mr();
+     842:	0e 94 c4 03 	call	0x788	; 0x788 <fdc_read_mr>
+		if((fdc_mr & 0xC0) == 0x80) break;
+     846:	80 91 09 01 	lds	r24, 0x0109
+     84a:	80 7c       	andi	r24, 0xC0	; 192
+     84c:	80 38       	cpi	r24, 0x80	; 128
+     84e:	39 f0       	breq	.+14     	; 0x85e <fdc_loop_until_rqm+0x1c>
+     850:	8c ec       	ldi	r24, 0xCC	; 204
+     852:	91 e0       	ldi	r25, 0x01	; 1
+     854:	01 97       	sbiw	r24, 0x01	; 1
+     856:	f1 f7       	brne	.-4      	; 0x854 <fdc_loop_until_rqm+0x12>
+     858:	00 c0       	rjmp	.+0      	; 0x85a <fdc_loop_until_rqm+0x18>
+     85a:	00 00       	nop
+     85c:	f2 cf       	rjmp	.-28     	; 0x842 <fdc_loop_until_rqm>
+     85e:	08 95       	ret
+
+00000860 <fdc_write_cr>:
+}
+
+
+
+//コントロールレジスタ
+void fdc_write_cr(unsigned char c){
+     860:	1f 93       	push	r17
+     862:	18 2f       	mov	r17, r24
+
+	uart_putsP(PSTR("+DR WRITE "), 10);
+     864:	84 e4       	ldi	r24, 0x44	; 68
+     866:	91 e0       	ldi	r25, 0x01	; 1
+     868:	6a e0       	ldi	r22, 0x0A	; 10
+     86a:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+	uart_itoh(c);
+     86e:	81 2f       	mov	r24, r17
+     870:	0e 94 23 02 	call	0x446	; 0x446 <uart_itoh>
+	uart_putnewline();
+     874:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+
+	//方向は出力
+	data_out();
+     878:	0e 94 5e 06 	call	0xcbc	; 0xcbc <data_out>
+	PORTA = c;
+     87c:	12 b9       	out	0x02, r17	; 2
+     87e:	00 c0       	rjmp	.+0      	; 0x880 <fdc_write_cr+0x20>
+     880:	00 c0       	rjmp	.+0      	; 0x882 <fdc_write_cr+0x22>
+    _delay_us(0.2);
+
+	//WR LDCR同時に下げる
+    PORTC = FDC_LDOR|FDC_RD|FDC_CS|FDC_DACK;
+     882:	86 e5       	ldi	r24, 0x56	; 86
+     884:	88 b9       	out	0x08, r24	; 8
+     886:	00 c0       	rjmp	.+0      	; 0x888 <fdc_write_cr+0x28>
+     888:	00 c0       	rjmp	.+0      	; 0x88a <fdc_write_cr+0x2a>
+    _delay_us(0.2);
+
+	//WR上げる
+    PORTC |= FDC_WR|FDC_LDCR;
+     88a:	88 b1       	in	r24, 0x08	; 8
+     88c:	89 60       	ori	r24, 0x09	; 9
+     88e:	88 b9       	out	0x08, r24	; 8
+
+}
+     890:	1f 91       	pop	r17
+     892:	08 95       	ret
+
+00000894 <fdc_write_do>:
+    return fdc_mr;
+}
+
+
+//デジタルアウトレジスタ
+void fdc_write_do(unsigned char c){
+     894:	1f 93       	push	r17
+     896:	18 2f       	mov	r17, r24
+
+	int i;
+	//ソフトリセット
+	if(c & 0x04){
+     898:	82 ff       	sbrs	r24, 2
+     89a:	09 c0       	rjmp	.+18     	; 0x8ae <fdc_write_do+0x1a>
+		//ST0リセット
+		for(i=0;i<=3;i++){
+			fdc_st0[i] = 0xFF;
+     89c:	8f ef       	ldi	r24, 0xFF	; 255
+     89e:	80 93 0b 01 	sts	0x010B, r24
+     8a2:	80 93 0c 01 	sts	0x010C, r24
+     8a6:	80 93 0d 01 	sts	0x010D, r24
+     8aa:	80 93 0e 01 	sts	0x010E, r24
+		}
+	}
+
+	uart_putsP(PSTR("+OR WRITE "), 10);
+     8ae:	8f e4       	ldi	r24, 0x4F	; 79
+     8b0:	91 e0       	ldi	r25, 0x01	; 1
+     8b2:	6a e0       	ldi	r22, 0x0A	; 10
+     8b4:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+	uart_itoh(c);
+     8b8:	81 2f       	mov	r24, r17
+     8ba:	0e 94 23 02 	call	0x446	; 0x446 <uart_itoh>
+	uart_putnewline();
+     8be:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+
+	//方向は出力
+	data_out();
+     8c2:	0e 94 5e 06 	call	0xcbc	; 0xcbc <data_out>
+	PORTA = c;
+     8c6:	12 b9       	out	0x02, r17	; 2
+     8c8:	86 e0       	ldi	r24, 0x06	; 6
+     8ca:	8a 95       	dec	r24
+     8cc:	f1 f7       	brne	.-4      	; 0x8ca <fdc_write_do+0x36>
+     8ce:	00 00       	nop
+    _delay_us(1);
+
+	//WR LDOR同時に下げる
+    PORTC = FDC_LDCR|FDC_RD|FDC_CS|FDC_DACK;
+     8d0:	85 e5       	ldi	r24, 0x55	; 85
+     8d2:	88 b9       	out	0x08, r24	; 8
+     8d4:	86 e0       	ldi	r24, 0x06	; 6
+     8d6:	8a 95       	dec	r24
+     8d8:	f1 f7       	brne	.-4      	; 0x8d6 <fdc_write_do+0x42>
+     8da:	00 00       	nop
+    _delay_us(1);
+
+	//WR上げる
+    PORTC |= FDC_WR|FDC_LDOR;
+     8dc:	88 b1       	in	r24, 0x08	; 8
+     8de:	8a 60       	ori	r24, 0x0A	; 10
+     8e0:	88 b9       	out	0x08, r24	; 8
+}
+     8e2:	1f 91       	pop	r17
+     8e4:	08 95       	ret
+
+000008e6 <fdc_write>:
+		_delay_us(100);
+	}
+}
+
+
+void fdc_write(unsigned char c){
+     8e6:	1f 93       	push	r17
+     8e8:	18 2f       	mov	r17, r24
+
+	//CS下げる A0上げる
+    PORTC = FDC_LDCR|FDC_LDOR|FDC_RD|FDC_WR|FDC_DACK|FDC_A0;
+     8ea:	8f e6       	ldi	r24, 0x6F	; 111
+     8ec:	88 b9       	out	0x08, r24	; 8
+
+	//方向は出力
+	data_out();
+     8ee:	0e 94 5e 06 	call	0xcbc	; 0xcbc <data_out>
+	PORTA = c;
+     8f2:	12 b9       	out	0x02, r17	; 2
+     8f4:	86 e0       	ldi	r24, 0x06	; 6
+     8f6:	8a 95       	dec	r24
+     8f8:	f1 f7       	brne	.-4      	; 0x8f6 <fdc_write+0x10>
+     8fa:	00 00       	nop
+    _delay_us(1);
+
+	//WR下げる
+    PORTC &= ~(FDC_WR);
+     8fc:	43 98       	cbi	0x08, 3	; 8
+     8fe:	00 c0       	rjmp	.+0      	; 0x900 <__stack+0x1>
+     900:	00 c0       	rjmp	.+0      	; 0x902 <__stack+0x3>
+    _delay_us(0.2);
+
+	//WR上げる
+    PORTC |= FDC_WR;
+     902:	43 9a       	sbi	0x08, 3	; 8
+     904:	00 c0       	rjmp	.+0      	; 0x906 <__stack+0x7>
+     906:	00 c0       	rjmp	.+0      	; 0x908 <__stack+0x9>
+    _delay_us(0.2);
+}
+     908:	1f 91       	pop	r17
+     90a:	08 95       	ret
+
+0000090c <fdc_exec_08>:
+
+
+//SENSE
+unsigned char fdc_exec_08(){
+
+	fdc_command = 0x07;
+     90c:	87 e0       	ldi	r24, 0x07	; 7
+     90e:	80 93 08 01 	sts	0x0108, r24
+
+    for(;;) {
+		fdc_read_mr();
+     912:	0e 94 c4 03 	call	0x788	; 0x788 <fdc_read_mr>
+		if((fdc_mr & 0xF8) == 0x80) break;
+     916:	80 91 09 01 	lds	r24, 0x0109
+     91a:	88 7f       	andi	r24, 0xF8	; 248
+     91c:	80 38       	cpi	r24, 0x80	; 128
+     91e:	39 f0       	breq	.+14     	; 0x92e <fdc_exec_08+0x22>
+     920:	8c ec       	ldi	r24, 0xCC	; 204
+     922:	91 e0       	ldi	r25, 0x01	; 1
+     924:	01 97       	sbiw	r24, 0x01	; 1
+     926:	f1 f7       	brne	.-4      	; 0x924 <fdc_exec_08+0x18>
+     928:	00 c0       	rjmp	.+0      	; 0x92a <fdc_exec_08+0x1e>
+     92a:	00 00       	nop
+     92c:	f2 cf       	rjmp	.-28     	; 0x912 <fdc_exec_08+0x6>
+		_delay_us(100);
+	}
+
+	fdc_write(0x08);
+     92e:	88 e0       	ldi	r24, 0x08	; 8
+     930:	0e 94 73 04 	call	0x8e6	; 0x8e6 <fdc_write>
+
+	//方向は入力
+	data_in();
+     934:	0e 94 5b 06 	call	0xcb6	; 0xcb6 <data_in>
+
+	//準備完了
+    for(;;) {
+		fdc_read_mr();
+     938:	0e 94 c4 03 	call	0x788	; 0x788 <fdc_read_mr>
+		if((fdc_mr & 0xF8) == 0xD0) break;
+     93c:	80 91 09 01 	lds	r24, 0x0109
+     940:	88 7f       	andi	r24, 0xF8	; 248
+     942:	80 3d       	cpi	r24, 0xD0	; 208
+     944:	39 f0       	breq	.+14     	; 0x954 <fdc_exec_08+0x48>
+     946:	8c ec       	ldi	r24, 0xCC	; 204
+     948:	91 e0       	ldi	r25, 0x01	; 1
+     94a:	01 97       	sbiw	r24, 0x01	; 1
+     94c:	f1 f7       	brne	.-4      	; 0x94a <fdc_exec_08+0x3e>
+     94e:	00 c0       	rjmp	.+0      	; 0x950 <fdc_exec_08+0x44>
+     950:	00 00       	nop
+     952:	f2 cf       	rjmp	.-28     	; 0x938 <fdc_exec_08+0x2c>
+		_delay_us(100);
+	}
+
+	//A0上げるRD下げる
+    PORTC &= ~(FDC_CS);
+     954:	44 98       	cbi	0x08, 4	; 8
+    PORTC |= FDC_A0;
+     956:	45 9a       	sbi	0x08, 5	; 8
+     958:	96 e0       	ldi	r25, 0x06	; 6
+     95a:	9a 95       	dec	r25
+     95c:	f1 f7       	brne	.-4      	; 0x95a <fdc_exec_08+0x4e>
+     95e:	00 00       	nop
+	_delay_us(1);
+    PORTC &= ~(FDC_RD);
+     960:	42 98       	cbi	0x08, 2	; 8
+     962:	86 e0       	ldi	r24, 0x06	; 6
+     964:	8a 95       	dec	r24
+     966:	f1 f7       	brne	.-4      	; 0x964 <fdc_exec_08+0x58>
+     968:	00 00       	nop
+	_delay_us(1);
+
+	//読み込み
+    fdc_data = PINA;
+     96a:	80 b1       	in	r24, 0x00	; 0
+     96c:	80 93 6a 01 	sts	0x016A, r24
+
+	//RD上げる
+    PORTC |= FDC_RD;
+     970:	42 9a       	sbi	0x08, 2	; 8
+
+
+	//0x80は1バイト、他は2バイト
+	if(fdc_data != 0x80) {
+     972:	80 91 6a 01 	lds	r24, 0x016A
+     976:	80 38       	cpi	r24, 0x80	; 128
+     978:	19 f1       	breq	.+70     	; 0x9c0 <fdc_exec_08+0xb4>
+
+	    for(;;) {
+			fdc_read_mr();
+     97a:	0e 94 c4 03 	call	0x788	; 0x788 <fdc_read_mr>
+			if(fdc_mr == 0xD0) break;
+     97e:	80 91 09 01 	lds	r24, 0x0109
+     982:	80 3d       	cpi	r24, 0xD0	; 208
+     984:	39 f0       	breq	.+14     	; 0x994 <fdc_exec_08+0x88>
+     986:	8c ec       	ldi	r24, 0xCC	; 204
+     988:	91 e0       	ldi	r25, 0x01	; 1
+     98a:	01 97       	sbiw	r24, 0x01	; 1
+     98c:	f1 f7       	brne	.-4      	; 0x98a <fdc_exec_08+0x7e>
+     98e:	00 c0       	rjmp	.+0      	; 0x990 <fdc_exec_08+0x84>
+     990:	00 00       	nop
+     992:	f3 cf       	rjmp	.-26     	; 0x97a <fdc_exec_08+0x6e>
+			_delay_us(100);
+		}
+
+		//A0上げるRD下げる
+	    PORTC &= ~(FDC_CS);
+     994:	44 98       	cbi	0x08, 4	; 8
+	    PORTC |= FDC_A0;
+     996:	45 9a       	sbi	0x08, 5	; 8
+     998:	96 e0       	ldi	r25, 0x06	; 6
+     99a:	9a 95       	dec	r25
+     99c:	f1 f7       	brne	.-4      	; 0x99a <fdc_exec_08+0x8e>
+     99e:	00 00       	nop
+		_delay_us(1);
+   		PORTC &= ~(FDC_RD);
+     9a0:	42 98       	cbi	0x08, 2	; 8
+     9a2:	86 e0       	ldi	r24, 0x06	; 6
+     9a4:	8a 95       	dec	r24
+     9a6:	f1 f7       	brne	.-4      	; 0x9a4 <fdc_exec_08+0x98>
+     9a8:	00 00       	nop
+		_delay_us(1);
+
+		//RD上げる
+	    PORTC |= FDC_RD;
+     9aa:	42 9a       	sbi	0x08, 2	; 8
+
+		//ステータス保存
+        fdc_st0[fdc_data & 0x03] = fdc_data;
+     9ac:	e0 91 6a 01 	lds	r30, 0x016A
+     9b0:	f0 e0       	ldi	r31, 0x00	; 0
+     9b2:	e3 70       	andi	r30, 0x03	; 3
+     9b4:	f0 70       	andi	r31, 0x00	; 0
+     9b6:	80 91 6a 01 	lds	r24, 0x016A
+     9ba:	e5 5f       	subi	r30, 0xF5	; 245
+     9bc:	fe 4f       	sbci	r31, 0xFE	; 254
+     9be:	80 83       	st	Z, r24
+
+	}
+
+	//CS上げる
+    PORTC |= FDC_CS;
+     9c0:	44 9a       	sbi	0x08, 4	; 8
+
+	uart_putsP(PSTR("+SENSE "), 7);
+     9c2:	83 e3       	ldi	r24, 0x33	; 51
+     9c4:	91 e0       	ldi	r25, 0x01	; 1
+     9c6:	67 e0       	ldi	r22, 0x07	; 7
+     9c8:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+	uart_itoh(fdc_data);
+     9cc:	80 91 6a 01 	lds	r24, 0x016A
+     9d0:	0e 94 23 02 	call	0x446	; 0x446 <uart_itoh>
+	uart_putnewline();
+     9d4:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+
+	return fdc_data;
+     9d8:	80 91 6a 01 	lds	r24, 0x016A
+}
+     9dc:	08 95       	ret
+
+000009de <__vector_1>:
+
+
+
+//INT割り込み
+ISR(INT0_vect)
+{
+     9de:	1f 92       	push	r1
+     9e0:	0f 92       	push	r0
+     9e2:	0f b6       	in	r0, 0x3f	; 63
+     9e4:	0f 92       	push	r0
+     9e6:	11 24       	eor	r1, r1
+     9e8:	0f 93       	push	r16
+     9ea:	1f 93       	push	r17
+     9ec:	2f 93       	push	r18
+     9ee:	3f 93       	push	r19
+     9f0:	4f 93       	push	r20
+     9f2:	5f 93       	push	r21
+     9f4:	6f 93       	push	r22
+     9f6:	7f 93       	push	r23
+     9f8:	8f 93       	push	r24
+     9fa:	9f 93       	push	r25
+     9fc:	af 93       	push	r26
+     9fe:	bf 93       	push	r27
+     a00:	cf 93       	push	r28
+     a02:	df 93       	push	r29
+     a04:	ef 93       	push	r30
+     a06:	ff 93       	push	r31
+
+	int i;
+    uart_putsP(PSTR("+INT0 "), 6);
+     a08:	8d ee       	ldi	r24, 0xED	; 237
+     a0a:	90 e0       	ldi	r25, 0x00	; 0
+     a0c:	66 e0       	ldi	r22, 0x06	; 6
+     a0e:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+
+	//割り込み種別取得
+	fdc_mr = fdc_read_mr();
+     a12:	0e 94 c4 03 	call	0x788	; 0x788 <fdc_read_mr>
+     a16:	80 93 09 01 	sts	0x0109, r24
+
+    if((fdc_mr & 0xC0) == 0x80) {
+     a1a:	80 91 09 01 	lds	r24, 0x0109
+     a1e:	80 7c       	andi	r24, 0xC0	; 192
+     a20:	80 38       	cpi	r24, 0x80	; 128
+     a22:	71 f4       	brne	.+28     	; 0xa40 <__vector_1+0x62>
+	    uart_putsP(PSTR("SENSE"), 5);
+     a24:	87 ee       	ldi	r24, 0xE7	; 231
+     a26:	90 e0       	ldi	r25, 0x00	; 0
+     a28:	65 e0       	ldi	r22, 0x05	; 5
+     a2a:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+		uart_putnewline();
+     a2e:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+
+		for(;;) {
+			fdc_exec_08();
+     a32:	0e 94 86 04 	call	0x90c	; 0x90c <fdc_exec_08>
+			if(fdc_data == 0x80) break;
+     a36:	80 91 6a 01 	lds	r24, 0x016A
+     a3a:	80 38       	cpi	r24, 0x80	; 128
+     a3c:	d1 f7       	brne	.-12     	; 0xa32 <__vector_1+0x54>
+     a3e:	3a c0       	rjmp	.+116    	; 0xab4 <__vector_1+0xd6>
+		}
+	} else {
+	    uart_putsP(PSTR("RESULT"), 6);
+     a40:	80 ee       	ldi	r24, 0xE0	; 224
+     a42:	90 e0       	ldi	r25, 0x00	; 0
+     a44:	66 e0       	ldi	r22, 0x06	; 6
+     a46:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+		uart_putnewline();
+     a4a:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+	    uart_putsP(PSTR("RESULT"), 6);
+     a4e:	89 ed       	ldi	r24, 0xD9	; 217
+     a50:	90 e0       	ldi	r25, 0x00	; 0
+     a52:	66 e0       	ldi	r22, 0x06	; 6
+     a54:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+     a58:	c0 e0       	ldi	r28, 0x00	; 0
+     a5a:	d0 e0       	ldi	r29, 0x00	; 0
+
+		for(i = 0; i<=2; i++) {
+			fdc_loop_until_dio();
+     a5c:	0e 94 12 04 	call	0x824	; 0x824 <fdc_loop_until_dio>
+			fdc_result_strg[i] = fdc_read();
+     a60:	0e 94 06 04 	call	0x80c	; 0x80c <fdc_read>
+     a64:	8e 01       	movw	r16, r28
+     a66:	0d 59       	subi	r16, 0x9D	; 157
+     a68:	1e 4f       	sbci	r17, 0xFE	; 254
+     a6a:	f8 01       	movw	r30, r16
+     a6c:	80 83       	st	Z, r24
+			uart_putchar(' '); 
+     a6e:	80 e2       	ldi	r24, 0x20	; 32
+     a70:	0e 94 aa 01 	call	0x354	; 0x354 <uart_putchar>
+			uart_itoh(fdc_result_strg[i]);
+     a74:	f8 01       	movw	r30, r16
+     a76:	80 81       	ld	r24, Z
+     a78:	0e 94 23 02 	call	0x446	; 0x446 <uart_itoh>
+	} else {
+	    uart_putsP(PSTR("RESULT"), 6);
+		uart_putnewline();
+	    uart_putsP(PSTR("RESULT"), 6);
+
+		for(i = 0; i<=2; i++) {
+     a7c:	21 96       	adiw	r28, 0x01	; 1
+     a7e:	c3 30       	cpi	r28, 0x03	; 3
+     a80:	d1 05       	cpc	r29, r1
+     a82:	61 f7       	brne	.-40     	; 0xa5c <__vector_1+0x7e>
+     a84:	c0 e0       	ldi	r28, 0x00	; 0
+     a86:	d0 e0       	ldi	r29, 0x00	; 0
+			uart_putchar(' '); 
+			uart_itoh(fdc_result_strg[i]);
+		}
+
+		for(i = 0; i<=3; i++) {
+			fdc_loop_until_dio();
+     a88:	0e 94 12 04 	call	0x824	; 0x824 <fdc_loop_until_dio>
+			fdc_result_chrn[i] = fdc_read();
+     a8c:	0e 94 06 04 	call	0x80c	; 0x80c <fdc_read>
+     a90:	8e 01       	movw	r16, r28
+     a92:	0a 59       	subi	r16, 0x9A	; 154
+     a94:	1e 4f       	sbci	r17, 0xFE	; 254
+     a96:	f8 01       	movw	r30, r16
+     a98:	80 83       	st	Z, r24
+			uart_putchar(' '); 
+     a9a:	80 e2       	ldi	r24, 0x20	; 32
+     a9c:	0e 94 aa 01 	call	0x354	; 0x354 <uart_putchar>
+			uart_itoh(fdc_result_chrn[i]);
+     aa0:	f8 01       	movw	r30, r16
+     aa2:	80 81       	ld	r24, Z
+     aa4:	0e 94 23 02 	call	0x446	; 0x446 <uart_itoh>
+			fdc_result_strg[i] = fdc_read();
+			uart_putchar(' '); 
+			uart_itoh(fdc_result_strg[i]);
+		}
+
+		for(i = 0; i<=3; i++) {
+     aa8:	21 96       	adiw	r28, 0x01	; 1
+     aaa:	c4 30       	cpi	r28, 0x04	; 4
+     aac:	d1 05       	cpc	r29, r1
+     aae:	61 f7       	brne	.-40     	; 0xa88 <__vector_1+0xaa>
+			fdc_loop_until_dio();
+			fdc_result_chrn[i] = fdc_read();
+			uart_putchar(' '); 
+			uart_itoh(fdc_result_chrn[i]);
+		}
+		uart_putnewline();
+     ab0:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+	}
+
+    uart_putsP(PSTR("+INT0 DONE"), 10);
+     ab4:	8e ec       	ldi	r24, 0xCE	; 206
+     ab6:	90 e0       	ldi	r25, 0x00	; 0
+     ab8:	6a e0       	ldi	r22, 0x0A	; 10
+     aba:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+	uart_putnewline();
+     abe:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+
+	fdc_command  = 0x00;
+     ac2:	10 92 08 01 	sts	0x0108, r1
+}
+     ac6:	ff 91       	pop	r31
+     ac8:	ef 91       	pop	r30
+     aca:	df 91       	pop	r29
+     acc:	cf 91       	pop	r28
+     ace:	bf 91       	pop	r27
+     ad0:	af 91       	pop	r26
+     ad2:	9f 91       	pop	r25
+     ad4:	8f 91       	pop	r24
+     ad6:	7f 91       	pop	r23
+     ad8:	6f 91       	pop	r22
+     ada:	5f 91       	pop	r21
+     adc:	4f 91       	pop	r20
+     ade:	3f 91       	pop	r19
+     ae0:	2f 91       	pop	r18
+     ae2:	1f 91       	pop	r17
+     ae4:	0f 91       	pop	r16
+     ae6:	0f 90       	pop	r0
+     ae8:	0f be       	out	0x3f, r0	; 63
+     aea:	0f 90       	pop	r0
+     aec:	1f 90       	pop	r1
+     aee:	18 95       	reti
+
+00000af0 <fdc_exec_07>:
+
+
+
+
+//RECALIBARTE
+void fdc_exec_07(unsigned char c){
+     af0:	1f 93       	push	r17
+     af2:	18 2f       	mov	r17, r24
+
+	fdc_command = 0x07;
+     af4:	87 e0       	ldi	r24, 0x07	; 7
+     af6:	80 93 08 01 	sts	0x0108, r24
+
+	fdc_loop_until_rqm();
+     afa:	0e 94 21 04 	call	0x842	; 0x842 <fdc_loop_until_rqm>
+	fdc_write(0x07);
+     afe:	87 e0       	ldi	r24, 0x07	; 7
+     b00:	0e 94 73 04 	call	0x8e6	; 0x8e6 <fdc_write>
+
+	fdc_loop_until_rqm();
+     b04:	0e 94 21 04 	call	0x842	; 0x842 <fdc_loop_until_rqm>
+	fdc_write(c);
+     b08:	81 2f       	mov	r24, r17
+     b0a:	0e 94 73 04 	call	0x8e6	; 0x8e6 <fdc_write>
+
+	//CS上げる
+    PORTC |= FDC_CS;
+     b0e:	44 9a       	sbi	0x08, 4	; 8
+}
+     b10:	1f 91       	pop	r17
+     b12:	08 95       	ret
+
+00000b14 <fdc_exec_0F>:
+
+
+
+
+//SEEK
+void fdc_exec_0F(unsigned char c1, unsigned char c2){
+     b14:	0f 93       	push	r16
+     b16:	1f 93       	push	r17
+     b18:	18 2f       	mov	r17, r24
+     b1a:	06 2f       	mov	r16, r22
+
+	fdc_command = 0x0F;
+     b1c:	8f e0       	ldi	r24, 0x0F	; 15
+     b1e:	80 93 08 01 	sts	0x0108, r24
+
+	fdc_loop_until_rqm();
+     b22:	0e 94 21 04 	call	0x842	; 0x842 <fdc_loop_until_rqm>
+	fdc_write(0x0F);
+     b26:	8f e0       	ldi	r24, 0x0F	; 15
+     b28:	0e 94 73 04 	call	0x8e6	; 0x8e6 <fdc_write>
+
+	fdc_loop_until_rqm();
+     b2c:	0e 94 21 04 	call	0x842	; 0x842 <fdc_loop_until_rqm>
+	fdc_write(c1);
+     b30:	81 2f       	mov	r24, r17
+     b32:	0e 94 73 04 	call	0x8e6	; 0x8e6 <fdc_write>
+
+	fdc_loop_until_rqm();
+     b36:	0e 94 21 04 	call	0x842	; 0x842 <fdc_loop_until_rqm>
+	fdc_write(c2);
+     b3a:	80 2f       	mov	r24, r16
+     b3c:	0e 94 73 04 	call	0x8e6	; 0x8e6 <fdc_write>
+
+	//CS上げる
+    PORTC |= FDC_CS;
+     b40:	44 9a       	sbi	0x08, 4	; 8
+
+	//完了を待つ
+	for(;;){
+		if(fdc_command == 0x00) break;
+     b42:	80 91 08 01 	lds	r24, 0x0108
+     b46:	88 23       	and	r24, r24
+     b48:	e1 f7       	brne	.-8      	; 0xb42 <fdc_exec_0F+0x2e>
+	}
+}
+     b4a:	1f 91       	pop	r17
+     b4c:	0f 91       	pop	r16
+     b4e:	08 95       	ret
+
+00000b50 <fdc_exec_04>:
+}
+
+
+
+//DEVICE
+unsigned char fdc_exec_04(unsigned char c){
+     b50:	1f 93       	push	r17
+     b52:	18 2f       	mov	r17, r24
+
+	fdc_loop_until_rqm();
+     b54:	0e 94 21 04 	call	0x842	; 0x842 <fdc_loop_until_rqm>
+	fdc_write(0x04);
+     b58:	84 e0       	ldi	r24, 0x04	; 4
+     b5a:	0e 94 73 04 	call	0x8e6	; 0x8e6 <fdc_write>
+
+	fdc_loop_until_rqm();
+     b5e:	0e 94 21 04 	call	0x842	; 0x842 <fdc_loop_until_rqm>
+	fdc_write(c);
+     b62:	81 2f       	mov	r24, r17
+     b64:	0e 94 73 04 	call	0x8e6	; 0x8e6 <fdc_write>
+
+    for(;;) {
+		fdc_read_mr();
+     b68:	0e 94 c4 03 	call	0x788	; 0x788 <fdc_read_mr>
+		if(fdc_mr == 0xD0) break;
+     b6c:	80 91 09 01 	lds	r24, 0x0109
+     b70:	80 3d       	cpi	r24, 0xD0	; 208
+     b72:	39 f0       	breq	.+14     	; 0xb82 <fdc_exec_04+0x32>
+     b74:	8c ec       	ldi	r24, 0xCC	; 204
+     b76:	91 e0       	ldi	r25, 0x01	; 1
+     b78:	01 97       	sbiw	r24, 0x01	; 1
+     b7a:	f1 f7       	brne	.-4      	; 0xb78 <fdc_exec_04+0x28>
+     b7c:	00 c0       	rjmp	.+0      	; 0xb7e <fdc_exec_04+0x2e>
+     b7e:	00 00       	nop
+     b80:	f3 cf       	rjmp	.-26     	; 0xb68 <fdc_exec_04+0x18>
+		_delay_us(100);
+	}
+
+	//方向は入力
+	data_in();
+     b82:	0e 94 5b 06 	call	0xcb6	; 0xcb6 <data_in>
+
+	//A0上げるRD下げる
+    PORTC &= ~(FDC_CS);
+     b86:	44 98       	cbi	0x08, 4	; 8
+    PORTC |= FDC_A0;
+     b88:	45 9a       	sbi	0x08, 5	; 8
+     b8a:	96 e0       	ldi	r25, 0x06	; 6
+     b8c:	9a 95       	dec	r25
+     b8e:	f1 f7       	brne	.-4      	; 0xb8c <fdc_exec_04+0x3c>
+     b90:	00 00       	nop
+	_delay_us(1);
+    PORTC &= ~(FDC_RD);
+     b92:	42 98       	cbi	0x08, 2	; 8
+     b94:	86 e0       	ldi	r24, 0x06	; 6
+     b96:	8a 95       	dec	r24
+     b98:	f1 f7       	brne	.-4      	; 0xb96 <fdc_exec_04+0x46>
+     b9a:	00 00       	nop
+	_delay_us(1);
+
+	//読み込み
+    fdc_data = PINA;
+     b9c:	80 b1       	in	r24, 0x00	; 0
+     b9e:	80 93 6a 01 	sts	0x016A, r24
+
+	//RD上げる
+    PORTC |= FDC_RD;
+     ba2:	42 9a       	sbi	0x08, 2	; 8
+
+	//CS上げる
+    PORTC |= FDC_CS;
+     ba4:	44 9a       	sbi	0x08, 4	; 8
+
+	uart_putsP(PSTR("+DEVICE "), 8);
+     ba6:	8b e3       	ldi	r24, 0x3B	; 59
+     ba8:	91 e0       	ldi	r25, 0x01	; 1
+     baa:	68 e0       	ldi	r22, 0x08	; 8
+     bac:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+	uart_itoh(fdc_data);
+     bb0:	80 91 6a 01 	lds	r24, 0x016A
+     bb4:	0e 94 23 02 	call	0x446	; 0x446 <uart_itoh>
+	uart_putnewline();
+     bb8:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+
+	return fdc_data;
+     bbc:	80 91 6a 01 	lds	r24, 0x016A
+}
+     bc0:	1f 91       	pop	r17
+     bc2:	08 95       	ret
+
+00000bc4 <fdc_exec_03>:
+
+
+
+
+//specify
+void fdc_exec_03(unsigned char c1, unsigned char c2){
+     bc4:	0f 93       	push	r16
+     bc6:	1f 93       	push	r17
+     bc8:	18 2f       	mov	r17, r24
+     bca:	06 2f       	mov	r16, r22
+
+	fdc_command = 0x03;
+     bcc:	83 e0       	ldi	r24, 0x03	; 3
+     bce:	80 93 08 01 	sts	0x0108, r24
+
+	fdc_loop_until_rqm();
+     bd2:	0e 94 21 04 	call	0x842	; 0x842 <fdc_loop_until_rqm>
+	fdc_write(0x03);
+     bd6:	83 e0       	ldi	r24, 0x03	; 3
+     bd8:	0e 94 73 04 	call	0x8e6	; 0x8e6 <fdc_write>
+
+	fdc_loop_until_rqm();
+     bdc:	0e 94 21 04 	call	0x842	; 0x842 <fdc_loop_until_rqm>
+	fdc_write(c1);
+     be0:	81 2f       	mov	r24, r17
+     be2:	0e 94 73 04 	call	0x8e6	; 0x8e6 <fdc_write>
+
+	fdc_loop_until_rqm();
+     be6:	0e 94 21 04 	call	0x842	; 0x842 <fdc_loop_until_rqm>
+	fdc_write(c2);
+     bea:	80 2f       	mov	r24, r16
+     bec:	0e 94 73 04 	call	0x8e6	; 0x8e6 <fdc_write>
+
+	//CS上げる
+    PORTC |= FDC_CS;
+     bf0:	44 9a       	sbi	0x08, 4	; 8
+     bf2:	83 e0       	ldi	r24, 0x03	; 3
+     bf4:	8a 95       	dec	r24
+     bf6:	f1 f7       	brne	.-4      	; 0xbf4 <fdc_exec_03+0x30>
+     bf8:	00 00       	nop
+    _delay_us(0.5);
+}
+     bfa:	1f 91       	pop	r17
+     bfc:	0f 91       	pop	r16
+     bfe:	08 95       	ret
+
+00000c00 <fdc_pcatreset>:
+
+
+void fdc_pcatreset(){
+
+	//リセットしてすぐに0x04を書き込むとPCATモード
+	fdc_write_do(0x00);
+     c00:	80 e0       	ldi	r24, 0x00	; 0
+     c02:	0e 94 4a 04 	call	0x894	; 0x894 <fdc_write_do>
+	fdc_write_do(0x0C);
+     c06:	8c e0       	ldi	r24, 0x0C	; 12
+     c08:	0e 94 4a 04 	call	0x894	; 0x894 <fdc_write_do>
+
+	//初期化完了を待つ
+	for(;;){
+		if(((fdc_st0[0]|fdc_st0[1]|fdc_st0[2]|fdc_st0[3]) & 0x04) == 0x00) break;
+     c0c:	30 91 0b 01 	lds	r19, 0x010B
+     c10:	80 91 0c 01 	lds	r24, 0x010C
+     c14:	90 91 0d 01 	lds	r25, 0x010D
+     c18:	20 91 0e 01 	lds	r18, 0x010E
+     c1c:	83 2b       	or	r24, r19
+     c1e:	89 2b       	or	r24, r25
+     c20:	82 2b       	or	r24, r18
+     c22:	82 fd       	sbrc	r24, 2
+     c24:	f3 cf       	rjmp	.-26     	; 0xc0c <fdc_pcatreset+0xc>
+	}
+
+	//DMAモードに切り替える
+	fdc_exec_03(0x33, 0x02 < 1);
+     c26:	83 e3       	ldi	r24, 0x33	; 51
+     c28:	60 e0       	ldi	r22, 0x00	; 0
+     c2a:	0e 94 e2 05 	call	0xbc4	; 0xbc4 <fdc_exec_03>
+
+	uart_putsP(PSTR("+PCAT"), 5);
+     c2e:	8a e5       	ldi	r24, 0x5A	; 90
+     c30:	91 e0       	ldi	r25, 0x01	; 1
+     c32:	65 e0       	ldi	r22, 0x05	; 5
+     c34:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+	uart_putnewline();
+     c38:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+}
+     c3c:	08 95       	ret
+
+00000c3e <fdc_exec_0A>:
+	return fdc_data;
+}
+
+
+//READ ID
+void fdc_exec_0A(unsigned char c){
+     c3e:	1f 93       	push	r17
+     c40:	18 2f       	mov	r17, r24
+
+ 	fdc_command = 0x0A;
+     c42:	8a e0       	ldi	r24, 0x0A	; 10
+     c44:	80 93 08 01 	sts	0x0108, r24
+
+	fdc_loop_until_rqm();
+     c48:	0e 94 21 04 	call	0x842	; 0x842 <fdc_loop_until_rqm>
+	fdc_write(0x0A | (c & 0x40));
+     c4c:	81 2f       	mov	r24, r17
+     c4e:	80 74       	andi	r24, 0x40	; 64
+     c50:	8a 60       	ori	r24, 0x0A	; 10
+     c52:	0e 94 73 04 	call	0x8e6	; 0x8e6 <fdc_write>
+
+ 	fdc_loop_until_rqm();
+     c56:	0e 94 21 04 	call	0x842	; 0x842 <fdc_loop_until_rqm>
+	fdc_write(c & 0x07);
+     c5a:	81 2f       	mov	r24, r17
+     c5c:	87 70       	andi	r24, 0x07	; 7
+     c5e:	0e 94 73 04 	call	0x8e6	; 0x8e6 <fdc_write>
+
+	timer_start();
+     c62:	0e 94 4b 08 	call	0x1096	; 0x1096 <timer_start>
+	for(;;){
+		if(fdc_command == 0x00 || timer_count >= timer_timeout) break;
+     c66:	80 91 08 01 	lds	r24, 0x0108
+     c6a:	88 23       	and	r24, r24
+     c6c:	31 f0       	breq	.+12     	; 0xc7a <fdc_exec_0A+0x3c>
+     c6e:	90 91 0f 01 	lds	r25, 0x010F
+     c72:	80 91 0a 01 	lds	r24, 0x010A
+     c76:	98 17       	cp	r25, r24
+     c78:	b0 f3       	brcs	.-20     	; 0xc66 <fdc_exec_0A+0x28>
+	}
+	timer_stop();
+     c7a:	0e 94 43 08 	call	0x1086	; 0x1086 <timer_stop>
+
+    uart_putsP(PSTR("+READID "), 8);
+     c7e:	8a e2       	ldi	r24, 0x2A	; 42
+     c80:	91 e0       	ldi	r25, 0x01	; 1
+     c82:	68 e0       	ldi	r22, 0x08	; 8
+     c84:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+	if(fdc_command == 0x00) {
+     c88:	80 91 08 01 	lds	r24, 0x0108
+     c8c:	88 23       	and	r24, r24
+     c8e:	41 f4       	brne	.+16     	; 0xca0 <fdc_exec_0A+0x62>
+		uart_putsP(PSTR("SUCCEEDED"), 9);
+     c90:	80 e2       	ldi	r24, 0x20	; 32
+     c92:	91 e0       	ldi	r25, 0x01	; 1
+     c94:	69 e0       	ldi	r22, 0x09	; 9
+     c96:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+		uart_putnewline();
+     c9a:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+     c9e:	09 c0       	rjmp	.+18     	; 0xcb2 <fdc_exec_0A+0x74>
+	}else{
+		uart_putsP(PSTR("FAILED FORCE-RESET"), 18);
+     ca0:	8d e0       	ldi	r24, 0x0D	; 13
+     ca2:	91 e0       	ldi	r25, 0x01	; 1
+     ca4:	62 e1       	ldi	r22, 0x12	; 18
+     ca6:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+		uart_putnewline();
+     caa:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+
+		//リセットする
+		fdc_pcatreset();
+     cae:	0e 94 00 06 	call	0xc00	; 0xc00 <fdc_pcatreset>
+	}
+}
+     cb2:	1f 91       	pop	r17
+     cb4:	08 95       	ret
+
+00000cb6 <data_in>:
+#include <avr/pgmspace.h>
+#include "global.h"
+
+void data_in() {
+	//データIOポート
+    DDRA  = 0x00;
+     cb6:	11 b8       	out	0x01, r1	; 1
+    PORTA = 0x00;
+     cb8:	12 b8       	out	0x02, r1	; 2
+}
+     cba:	08 95       	ret
+
+00000cbc <data_out>:
+
+void data_out() {
+	//データIOポート
+    DDRA  = 0xFF;
+     cbc:	8f ef       	ldi	r24, 0xFF	; 255
+     cbe:	81 b9       	out	0x01, r24	; 1
+}
+     cc0:	08 95       	ret
+
+00000cc2 <htoi>:
+
+char base64chars[] PROGMEM = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+
+//strtol関数が動かないので代替
+int htoi (const char *s) {
+     cc2:	fc 01       	movw	r30, r24
+     cc4:	20 e0       	ldi	r18, 0x00	; 0
+     cc6:	30 e0       	ldi	r19, 0x00	; 0
+     cc8:	2f c0       	rjmp	.+94     	; 0xd28 <htoi+0x66>
+    int n;
+    
+    for(n=0;*s;s++){
+        if ( *s >= '0' && *s <= '9' ) {
+     cca:	84 2f       	mov	r24, r20
+     ccc:	80 53       	subi	r24, 0x30	; 48
+     cce:	8a 30       	cpi	r24, 0x0A	; 10
+     cd0:	58 f4       	brcc	.+22     	; 0xce8 <htoi+0x26>
+            n = 16 * n + (*s - '0');
+     cd2:	c9 01       	movw	r24, r18
+     cd4:	54 e0       	ldi	r21, 0x04	; 4
+     cd6:	88 0f       	add	r24, r24
+     cd8:	99 1f       	adc	r25, r25
+     cda:	5a 95       	dec	r21
+     cdc:	e1 f7       	brne	.-8      	; 0xcd6 <htoi+0x14>
+     cde:	24 2f       	mov	r18, r20
+     ce0:	30 e0       	ldi	r19, 0x00	; 0
+     ce2:	20 53       	subi	r18, 0x30	; 48
+     ce4:	30 40       	sbci	r19, 0x00	; 0
+     ce6:	1d c0       	rjmp	.+58     	; 0xd22 <htoi+0x60>
+        }
+        else if ( *s >= 'a' && *s <= 'f' ) {
+     ce8:	84 2f       	mov	r24, r20
+     cea:	81 56       	subi	r24, 0x61	; 97
+     cec:	86 30       	cpi	r24, 0x06	; 6
+     cee:	58 f4       	brcc	.+22     	; 0xd06 <htoi+0x44>
+            n = 16 * n + ((*s - 'a') + 10);
+     cf0:	c9 01       	movw	r24, r18
+     cf2:	34 e0       	ldi	r19, 0x04	; 4
+     cf4:	88 0f       	add	r24, r24
+     cf6:	99 1f       	adc	r25, r25
+     cf8:	3a 95       	dec	r19
+     cfa:	e1 f7       	brne	.-8      	; 0xcf4 <htoi+0x32>
+     cfc:	24 2f       	mov	r18, r20
+     cfe:	30 e0       	ldi	r19, 0x00	; 0
+     d00:	27 55       	subi	r18, 0x57	; 87
+     d02:	30 40       	sbci	r19, 0x00	; 0
+     d04:	0e c0       	rjmp	.+28     	; 0xd22 <htoi+0x60>
+        }
+        else if ( *s >= 'A' && *s <= 'F' ) {
+     d06:	84 2f       	mov	r24, r20
+     d08:	81 54       	subi	r24, 0x41	; 65
+     d0a:	86 30       	cpi	r24, 0x06	; 6
+     d0c:	60 f4       	brcc	.+24     	; 0xd26 <htoi+0x64>
+            n = 16 * n + ((*s - 'A') + 10);
+     d0e:	c9 01       	movw	r24, r18
+     d10:	24 e0       	ldi	r18, 0x04	; 4
+     d12:	88 0f       	add	r24, r24
+     d14:	99 1f       	adc	r25, r25
+     d16:	2a 95       	dec	r18
+     d18:	e1 f7       	brne	.-8      	; 0xd12 <htoi+0x50>
+     d1a:	24 2f       	mov	r18, r20
+     d1c:	30 e0       	ldi	r19, 0x00	; 0
+     d1e:	27 53       	subi	r18, 0x37	; 55
+     d20:	30 40       	sbci	r19, 0x00	; 0
+     d22:	28 0f       	add	r18, r24
+     d24:	39 1f       	adc	r19, r25
+
+//strtol関数が動かないので代替
+int htoi (const char *s) {
+    int n;
+    
+    for(n=0;*s;s++){
+     d26:	31 96       	adiw	r30, 0x01	; 1
+     d28:	40 81       	ld	r20, Z
+     d2a:	44 23       	and	r20, r20
+     d2c:	71 f6       	brne	.-100    	; 0xcca <htoi+0x8>
+        else if ( *s >= 'A' && *s <= 'F' ) {
+            n = 16 * n + ((*s - 'A') + 10);
+        }
+    }
+    return n;
+}
+     d2e:	c9 01       	movw	r24, r18
+     d30:	08 95       	ret
+
+00000d32 <crcByte>:
+
+unsigned int crcByte(unsigned int crc, unsigned char b) {
+  crc = (unsigned char)(crc >> 8) | (crc << 8);
+     d32:	49 2f       	mov	r20, r25
+     d34:	50 e0       	ldi	r21, 0x00	; 0
+     d36:	38 2f       	mov	r19, r24
+     d38:	20 e0       	ldi	r18, 0x00	; 0
+     d3a:	42 2b       	or	r20, r18
+     d3c:	53 2b       	or	r21, r19
+  crc ^= b;
+     d3e:	70 e0       	ldi	r23, 0x00	; 0
+     d40:	46 27       	eor	r20, r22
+     d42:	57 27       	eor	r21, r23
+  crc ^= (unsigned char)(crc & 0xff) >> 4;
+     d44:	84 2f       	mov	r24, r20
+     d46:	82 95       	swap	r24
+     d48:	8f 70       	andi	r24, 0x0F	; 15
+     d4a:	90 e0       	ldi	r25, 0x00	; 0
+     d4c:	84 27       	eor	r24, r20
+     d4e:	95 27       	eor	r25, r21
+  crc ^= crc << 12;
+     d50:	ac 01       	movw	r20, r24
+     d52:	54 2f       	mov	r21, r20
+     d54:	44 27       	eor	r20, r20
+     d56:	52 95       	swap	r21
+     d58:	50 7f       	andi	r21, 0xF0	; 240
+     d5a:	48 27       	eor	r20, r24
+     d5c:	59 27       	eor	r21, r25
+  crc ^= (crc & 0xff) << 5;
+     d5e:	9a 01       	movw	r18, r20
+     d60:	30 70       	andi	r19, 0x00	; 0
+     d62:	65 e0       	ldi	r22, 0x05	; 5
+     d64:	22 0f       	add	r18, r18
+     d66:	33 1f       	adc	r19, r19
+     d68:	6a 95       	dec	r22
+     d6a:	e1 f7       	brne	.-8      	; 0xd64 <crcByte+0x32>
+     d6c:	24 27       	eor	r18, r20
+     d6e:	35 27       	eor	r19, r21
+  return crc;
+}
+     d70:	c9 01       	movw	r24, r18
+     d72:	08 95       	ret
+
+00000d74 <shell_exec>:
+
+char uart_shell_command[7];
+uint8_t uart_shell_argv[10];
+char uart_shell_argc;
+
+void shell_exec() {
+     d74:	cf 93       	push	r28
+     d76:	df 93       	push	r29
+	//メモリ節約用
+	const char *str_invalid = PSTR("+INVALID ");
+	const char *str_delim   = PSTR(" ");
+
+	//+で始まる行はコメントにしないと受信が飛ぶ
+	if(uart_shell_buffer[0] == '+') {
+     d78:	80 91 11 01 	lds	r24, 0x0111
+     d7c:	8b 32       	cpi	r24, 0x2B	; 43
+     d7e:	09 f4       	brne	.+2      	; 0xd82 <shell_exec+0xe>
+     d80:	03 c1       	rjmp	.+518    	; 0xf88 <shell_exec+0x214>
+		return;
+	}
+
+
+	//シェル応答開始
+	uart_putchar('+');
+     d82:	8b e2       	ldi	r24, 0x2B	; 43
+     d84:	0e 94 aa 01 	call	0x354	; 0x354 <uart_putchar>
+
+	//繋がるとCONNECTEDが飛ぶので、イレギュラー処理
+	if(!strcmp_P((const char *) uart_shell_buffer, PSTR("CONNECTED"))){
+     d88:	81 e1       	ldi	r24, 0x11	; 17
+     d8a:	91 e0       	ldi	r25, 0x01	; 1
+     d8c:	65 ef       	ldi	r22, 0xF5	; 245
+     d8e:	71 e0       	ldi	r23, 0x01	; 1
+     d90:	0e 94 7f 08 	call	0x10fe	; 0x10fe <strcmp_P>
+     d94:	89 2b       	or	r24, r25
+     d96:	51 f4       	brne	.+20     	; 0xdac <shell_exec+0x38>
+
+		uart_puts((char *) uart_shell_buffer);
+     d98:	81 e1       	ldi	r24, 0x11	; 17
+     d9a:	91 e0       	ldi	r25, 0x01	; 1
+     d9c:	0e 94 08 02 	call	0x410	; 0x410 <uart_puts>
+		uart_putnewline();
+     da0:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+
+		uart_putsP(PSTR("+WELCOME"), 8);
+     da4:	8c ee       	ldi	r24, 0xEC	; 236
+     da6:	91 e0       	ldi	r25, 0x01	; 1
+     da8:	68 e0       	ldi	r22, 0x08	; 8
+     daa:	ea c0       	rjmp	.+468    	; 0xf80 <shell_exec+0x20c>
+	char *tp;
+	int i;
+
+	//メモリ節約用
+	const char *str_invalid = PSTR("+INVALID ");
+	const char *str_delim   = PSTR(" ");
+     dac:	81 e1       	ldi	r24, 0x11	; 17
+     dae:	91 e0       	ldi	r25, 0x01	; 1
+     db0:	6f ef       	ldi	r22, 0xFF	; 255
+     db2:	71 e0       	ldi	r23, 0x01	; 1
+     db4:	0e 94 7a 08 	call	0x10f4	; 0x10f4 <strtok_P>
+     db8:	bc 01       	movw	r22, r24
+		return;
+	}
+
+	//コマンドは6文字
+	tp = strtok_P((char *) uart_shell_buffer, str_delim);
+	if(tp == NULL || strlen(tp) != 6) {
+     dba:	00 97       	sbiw	r24, 0x00	; 0
+     dbc:	41 f0       	breq	.+16     	; 0xdce <shell_exec+0x5a>
+     dbe:	fc 01       	movw	r30, r24
+     dc0:	01 90       	ld	r0, Z+
+     dc2:	00 20       	and	r0, r0
+     dc4:	e9 f7       	brne	.-6      	; 0xdc0 <shell_exec+0x4c>
+     dc6:	37 97       	sbiw	r30, 0x07	; 7
+     dc8:	e8 17       	cp	r30, r24
+     dca:	f9 07       	cpc	r31, r25
+     dcc:	79 f0       	breq	.+30     	; 0xdec <shell_exec+0x78>
+
+		uart_puts((char *) uart_shell_buffer);
+     dce:	81 e1       	ldi	r24, 0x11	; 17
+     dd0:	91 e0       	ldi	r25, 0x01	; 1
+     dd2:	0e 94 08 02 	call	0x410	; 0x410 <uart_puts>
+		uart_putnewline();
+     dd6:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+
+	char *tp;
+	int i;
+
+	//メモリ節約用
+	const char *str_invalid = PSTR("+INVALID ");
+     dda:	81 e0       	ldi	r24, 0x01	; 1
+     ddc:	92 e0       	ldi	r25, 0x02	; 2
+     dde:	69 e0       	ldi	r22, 0x09	; 9
+     de0:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+
+		uart_puts((char *) uart_shell_buffer);
+		uart_putnewline();
+
+		uart_putsP(str_invalid, 9);
+		uart_putsP(PSTR("SYNTAX"), 6);
+     de4:	85 ee       	ldi	r24, 0xE5	; 229
+     de6:	91 e0       	ldi	r25, 0x01	; 1
+     de8:	66 e0       	ldi	r22, 0x06	; 6
+     dea:	ca c0       	rjmp	.+404    	; 0xf80 <shell_exec+0x20c>
+		uart_putnewline();
+		return;
+	}
+	strcpy(uart_shell_command, tp);
+     dec:	89 e7       	ldi	r24, 0x79	; 121
+     dee:	91 e0       	ldi	r25, 0x01	; 1
+     df0:	0e 94 af 08 	call	0x115e	; 0x115e <strcpy>
+	uart_shell_argc = 0;
+     df4:	10 92 80 01 	sts	0x0180, r1
+     df8:	cf e6       	ldi	r28, 0x6F	; 111
+     dfa:	d1 e0       	ldi	r29, 0x01	; 1
+	char *tp;
+	int i;
+
+	//メモリ節約用
+	const char *str_invalid = PSTR("+INVALID ");
+	const char *str_delim   = PSTR(" ");
+     dfc:	80 e0       	ldi	r24, 0x00	; 0
+     dfe:	90 e0       	ldi	r25, 0x00	; 0
+     e00:	6f ef       	ldi	r22, 0xFF	; 255
+     e02:	71 e0       	ldi	r23, 0x01	; 1
+     e04:	0e 94 7a 08 	call	0x10f4	; 0x10f4 <strtok_P>
+     e08:	9c 01       	movw	r18, r24
+
+
+	//パラメータを登録
+	for(i=0; i<10; i++){
+		tp = strtok_P( NULL, str_delim);
+		if(tp != NULL) {
+     e0a:	00 97       	sbiw	r24, 0x00	; 0
+     e0c:	79 f1       	breq	.+94     	; 0xe6c <shell_exec+0xf8>
+			uart_shell_argc++;
+     e0e:	80 91 80 01 	lds	r24, 0x0180
+     e12:	8f 5f       	subi	r24, 0xFF	; 255
+     e14:	80 93 80 01 	sts	0x0180, r24
+
+			if(strlen(tp) == 4){
+     e18:	d9 01       	movw	r26, r18
+     e1a:	0d 90       	ld	r0, X+
+     e1c:	00 20       	and	r0, r0
+     e1e:	e9 f7       	brne	.-6      	; 0xe1a <shell_exec+0xa6>
+     e20:	11 97       	sbiw	r26, 0x01	; 1
+     e22:	a2 1b       	sub	r26, r18
+     e24:	b3 0b       	sbc	r27, r19
+     e26:	a4 30       	cpi	r26, 0x04	; 4
+     e28:	b1 05       	cpc	r27, r1
+     e2a:	29 f4       	brne	.+10     	; 0xe36 <shell_exec+0xc2>
+				//4文字は2バイト捨てて16進
+				uart_shell_argv[i] = htoi(tp+2);
+     e2c:	c9 01       	movw	r24, r18
+     e2e:	02 96       	adiw	r24, 0x02	; 2
+     e30:	0e 94 61 06 	call	0xcc2	; 0xcc2 <htoi>
+     e34:	05 c0       	rjmp	.+10     	; 0xe40 <shell_exec+0xcc>
+			}
+			else if(strlen(tp) < 4){
+     e36:	14 97       	sbiw	r26, 0x04	; 4
+     e38:	50 f4       	brcc	.+20     	; 0xe4e <shell_exec+0xda>
+				//3文字以下は10進
+				uart_shell_argv[i] = atoi(tp);
+     e3a:	c9 01       	movw	r24, r18
+     e3c:	0e 94 5c 08 	call	0x10b8	; 0x10b8 <atoi>
+     e40:	88 83       	st	Y, r24
+				uart_puts((char *) uart_shell_buffer);
+				uart_putnewline();
+				uart_putsP(str_invalid, 9);
+				uart_putsP(PSTR("ARGV"), 4);
+				uart_putnewline();
+				return;
+     e42:	21 96       	adiw	r28, 0x01	; 1
+	strcpy(uart_shell_command, tp);
+	uart_shell_argc = 0;
+
+
+	//パラメータを登録
+	for(i=0; i<10; i++){
+     e44:	81 e0       	ldi	r24, 0x01	; 1
+     e46:	c9 37       	cpi	r28, 0x79	; 121
+     e48:	d8 07       	cpc	r29, r24
+     e4a:	c1 f6       	brne	.-80     	; 0xdfc <shell_exec+0x88>
+     e4c:	0f c0       	rjmp	.+30     	; 0xe6c <shell_exec+0xf8>
+				//3文字以下は10進
+				uart_shell_argv[i] = atoi(tp);
+			}
+			else{
+				//エラーで終了
+				uart_puts((char *) uart_shell_buffer);
+     e4e:	81 e1       	ldi	r24, 0x11	; 17
+     e50:	91 e0       	ldi	r25, 0x01	; 1
+     e52:	0e 94 08 02 	call	0x410	; 0x410 <uart_puts>
+				uart_putnewline();
+     e56:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+
+	char *tp;
+	int i;
+
+	//メモリ節約用
+	const char *str_invalid = PSTR("+INVALID ");
+     e5a:	81 e0       	ldi	r24, 0x01	; 1
+     e5c:	92 e0       	ldi	r25, 0x02	; 2
+     e5e:	69 e0       	ldi	r22, 0x09	; 9
+     e60:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+			else{
+				//エラーで終了
+				uart_puts((char *) uart_shell_buffer);
+				uart_putnewline();
+				uart_putsP(str_invalid, 9);
+				uart_putsP(PSTR("ARGV"), 4);
+     e64:	80 ee       	ldi	r24, 0xE0	; 224
+     e66:	91 e0       	ldi	r25, 0x01	; 1
+     e68:	64 e0       	ldi	r22, 0x04	; 4
+     e6a:	8a c0       	rjmp	.+276    	; 0xf80 <shell_exec+0x20c>
+			break;
+		}
+	}
+
+	//清書したコマンドを送信
+	uart_puts((char *) uart_shell_command);
+     e6c:	89 e7       	ldi	r24, 0x79	; 121
+     e6e:	91 e0       	ldi	r25, 0x01	; 1
+     e70:	0e 94 08 02 	call	0x410	; 0x410 <uart_puts>
+	uart_putchar(' ');
+     e74:	80 e2       	ldi	r24, 0x20	; 32
+     e76:	0e 94 aa 01 	call	0x354	; 0x354 <uart_putchar>
+     e7a:	c0 e0       	ldi	r28, 0x00	; 0
+     e7c:	d0 e0       	ldi	r29, 0x00	; 0
+     e7e:	0a c0       	rjmp	.+20     	; 0xe94 <shell_exec+0x120>
+	for(i=0; i<uart_shell_argc; i++){
+		uart_itoh(uart_shell_argv[i]);
+     e80:	fe 01       	movw	r30, r28
+     e82:	e1 59       	subi	r30, 0x91	; 145
+     e84:	fe 4f       	sbci	r31, 0xFE	; 254
+     e86:	80 81       	ld	r24, Z
+     e88:	0e 94 23 02 	call	0x446	; 0x446 <uart_itoh>
+		uart_putchar(' ');
+     e8c:	80 e2       	ldi	r24, 0x20	; 32
+     e8e:	0e 94 aa 01 	call	0x354	; 0x354 <uart_putchar>
+	}
+
+	//清書したコマンドを送信
+	uart_puts((char *) uart_shell_command);
+	uart_putchar(' ');
+	for(i=0; i<uart_shell_argc; i++){
+     e92:	21 96       	adiw	r28, 0x01	; 1
+     e94:	80 91 80 01 	lds	r24, 0x0180
+     e98:	90 e0       	ldi	r25, 0x00	; 0
+     e9a:	c8 17       	cp	r28, r24
+     e9c:	d9 07       	cpc	r29, r25
+     e9e:	84 f3       	brlt	.-32     	; 0xe80 <shell_exec+0x10c>
+		uart_itoh(uart_shell_argv[i]);
+		uart_putchar(' ');
+	}
+	uart_putnewline();	
+     ea0:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+
+
+	//リセット命令
+	if(!strcmp_P((const char *) uart_shell_command, PSTR("FATRST"))){
+     ea4:	89 e7       	ldi	r24, 0x79	; 121
+     ea6:	91 e0       	ldi	r25, 0x01	; 1
+     ea8:	69 ed       	ldi	r22, 0xD9	; 217
+     eaa:	71 e0       	ldi	r23, 0x01	; 1
+     eac:	0e 94 7f 08 	call	0x10fe	; 0x10fe <strcmp_P>
+     eb0:	89 2b       	or	r24, r25
+     eb2:	19 f4       	brne	.+6      	; 0xeba <shell_exec+0x146>
+		fdc_pcatreset();
+     eb4:	0e 94 00 06 	call	0xc00	; 0xc00 <fdc_pcatreset>
+     eb8:	67 c0       	rjmp	.+206    	; 0xf88 <shell_exec+0x214>
+		return;
+	}
+
+
+	//CMD 0F
+	if(!strcmp_P((const char *) uart_shell_command, PSTR("FCMD0F"))){
+     eba:	89 e7       	ldi	r24, 0x79	; 121
+     ebc:	91 e0       	ldi	r25, 0x01	; 1
+     ebe:	62 ed       	ldi	r22, 0xD2	; 210
+     ec0:	71 e0       	ldi	r23, 0x01	; 1
+     ec2:	0e 94 7f 08 	call	0x10fe	; 0x10fe <strcmp_P>
+     ec6:	89 2b       	or	r24, r25
+     ec8:	39 f4       	brne	.+14     	; 0xed8 <shell_exec+0x164>
+		fdc_exec_0F(uart_shell_argv[0], uart_shell_argv[1]);
+     eca:	80 91 6f 01 	lds	r24, 0x016F
+     ece:	60 91 70 01 	lds	r22, 0x0170
+     ed2:	0e 94 8a 05 	call	0xb14	; 0xb14 <fdc_exec_0F>
+     ed6:	58 c0       	rjmp	.+176    	; 0xf88 <shell_exec+0x214>
+		return;
+	}
+
+
+	//DO書き込み
+	if(!strcmp_P((const char *) uart_shell_command, PSTR("FWRDOR"))){
+     ed8:	89 e7       	ldi	r24, 0x79	; 121
+     eda:	91 e0       	ldi	r25, 0x01	; 1
+     edc:	6b ec       	ldi	r22, 0xCB	; 203
+     ede:	71 e0       	ldi	r23, 0x01	; 1
+     ee0:	0e 94 7f 08 	call	0x10fe	; 0x10fe <strcmp_P>
+     ee4:	89 2b       	or	r24, r25
+     ee6:	29 f4       	brne	.+10     	; 0xef2 <shell_exec+0x17e>
+		fdc_write_do(uart_shell_argv[0]);
+     ee8:	80 91 6f 01 	lds	r24, 0x016F
+     eec:	0e 94 4a 04 	call	0x894	; 0x894 <fdc_write_do>
+     ef0:	4b c0       	rjmp	.+150    	; 0xf88 <shell_exec+0x214>
+		return;
+	}
+
+	//CR書き込み
+	if(!strcmp_P((const char *) uart_shell_command, PSTR("FWRCRR"))){
+     ef2:	89 e7       	ldi	r24, 0x79	; 121
+     ef4:	91 e0       	ldi	r25, 0x01	; 1
+     ef6:	64 ec       	ldi	r22, 0xC4	; 196
+     ef8:	71 e0       	ldi	r23, 0x01	; 1
+     efa:	0e 94 7f 08 	call	0x10fe	; 0x10fe <strcmp_P>
+     efe:	89 2b       	or	r24, r25
+     f00:	29 f4       	brne	.+10     	; 0xf0c <shell_exec+0x198>
+		fdc_write_cr(uart_shell_argv[0]);
+     f02:	80 91 6f 01 	lds	r24, 0x016F
+     f06:	0e 94 30 04 	call	0x860	; 0x860 <fdc_write_cr>
+     f0a:	3e c0       	rjmp	.+124    	; 0xf88 <shell_exec+0x214>
+		return;
+	}
+
+	//CMD 0A
+	if(!strcmp_P((const char *) uart_shell_command, PSTR("FCMD0A"))){
+     f0c:	89 e7       	ldi	r24, 0x79	; 121
+     f0e:	91 e0       	ldi	r25, 0x01	; 1
+     f10:	6d eb       	ldi	r22, 0xBD	; 189
+     f12:	71 e0       	ldi	r23, 0x01	; 1
+     f14:	0e 94 7f 08 	call	0x10fe	; 0x10fe <strcmp_P>
+     f18:	89 2b       	or	r24, r25
+     f1a:	29 f4       	brne	.+10     	; 0xf26 <shell_exec+0x1b2>
+		fdc_exec_0A(uart_shell_argv[0]);
+     f1c:	80 91 6f 01 	lds	r24, 0x016F
+     f20:	0e 94 1f 06 	call	0xc3e	; 0xc3e <fdc_exec_0A>
+     f24:	31 c0       	rjmp	.+98     	; 0xf88 <shell_exec+0x214>
+		return;
+	}
+
+	//HIGH DENSITY
+	if(!strcmp_P((const char *) uart_shell_command, PSTR("FHIDEN"))){
+     f26:	89 e7       	ldi	r24, 0x79	; 121
+     f28:	91 e0       	ldi	r25, 0x01	; 1
+     f2a:	66 eb       	ldi	r22, 0xB6	; 182
+     f2c:	71 e0       	ldi	r23, 0x01	; 1
+     f2e:	0e 94 7f 08 	call	0x10fe	; 0x10fe <strcmp_P>
+     f32:	89 2b       	or	r24, r25
+     f34:	31 f4       	brne	.+12     	; 0xf42 <shell_exec+0x1ce>
+		fdc_set_highden(uart_shell_argv[0]);
+     f36:	80 91 6f 01 	lds	r24, 0x016F
+     f3a:	90 e0       	ldi	r25, 0x00	; 0
+     f3c:	0e 94 89 03 	call	0x712	; 0x712 <fdc_set_highden>
+     f40:	23 c0       	rjmp	.+70     	; 0xf88 <shell_exec+0x214>
+		return;
+	}
+
+	//CHRN設定
+	if(!strcmp_P((const char *) uart_shell_command, PSTR("FSCHRN"))){
+     f42:	89 e7       	ldi	r24, 0x79	; 121
+     f44:	91 e0       	ldi	r25, 0x01	; 1
+     f46:	6f ea       	ldi	r22, 0xAF	; 175
+     f48:	71 e0       	ldi	r23, 0x01	; 1
+     f4a:	0e 94 7f 08 	call	0x10fe	; 0x10fe <strcmp_P>
+     f4e:	89 2b       	or	r24, r25
+     f50:	79 f4       	brne	.+30     	; 0xf70 <shell_exec+0x1fc>
+		fdc_set_chrn(uart_shell_argv[0], uart_shell_argv[1], uart_shell_argv[2], uart_shell_argv[3]);
+     f52:	60 91 70 01 	lds	r22, 0x0170
+     f56:	40 91 71 01 	lds	r20, 0x0171
+     f5a:	20 91 72 01 	lds	r18, 0x0172
+     f5e:	80 91 6f 01 	lds	r24, 0x016F
+     f62:	90 e0       	ldi	r25, 0x00	; 0
+     f64:	70 e0       	ldi	r23, 0x00	; 0
+     f66:	50 e0       	ldi	r21, 0x00	; 0
+     f68:	30 e0       	ldi	r19, 0x00	; 0
+     f6a:	0e 94 a1 03 	call	0x742	; 0x742 <fdc_set_chrn>
+     f6e:	0c c0       	rjmp	.+24     	; 0xf88 <shell_exec+0x214>
+
+	char *tp;
+	int i;
+
+	//メモリ節約用
+	const char *str_invalid = PSTR("+INVALID ");
+     f70:	81 e0       	ldi	r24, 0x01	; 1
+     f72:	92 e0       	ldi	r25, 0x02	; 2
+     f74:	69 e0       	ldi	r22, 0x09	; 9
+     f76:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+	}
+
+
+	//return無し
+	uart_putsP(str_invalid, 9);
+	uart_putsP(PSTR("COMMAND"), 7);
+     f7a:	87 ea       	ldi	r24, 0xA7	; 167
+     f7c:	91 e0       	ldi	r25, 0x01	; 1
+     f7e:	67 e0       	ldi	r22, 0x07	; 7
+     f80:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+	uart_putnewline();
+     f84:	0e 94 dd 01 	call	0x3ba	; 0x3ba <uart_putnewline>
+}
+     f88:	df 91       	pop	r29
+     f8a:	cf 91       	pop	r28
+     f8c:	08 95       	ret
+
+00000f8e <spi_leds_set>:
+}
+
+
+void spi_leds_set(unsigned char c) {
+
+	spi_leds = c;
+     f8e:	80 93 01 01 	sts	0x0101, r24
+	SPDR     = c;
+     f92:	8e bd       	out	0x2e, r24	; 46
+    while((SPSR & _BV(SPIF)) == 0);
+     f94:	0d b4       	in	r0, 0x2d	; 45
+     f96:	07 fe       	sbrs	r0, 7
+     f98:	fd cf       	rjmp	.-6      	; 0xf94 <spi_leds_set+0x6>
+
+	PORTD &= ~_BV(PD5);
+     f9a:	5d 98       	cbi	0x0b, 5	; 11
+	PORTD |= _BV(PD5);
+     f9c:	5d 9a       	sbi	0x0b, 5	; 11
+}
+     f9e:	08 95       	ret
+
+00000fa0 <spi_sram_start_read>:
+
+//SRAM読み出し準備
+void spi_sram_start_read(unsigned long start) {
+
+	//CS下げる
+	PORTD &= ~_BV(PD4);
+     fa0:	5c 98       	cbi	0x0b, 4	; 11
+
+	//READ送信
+	SPDR     = 0x03;
+     fa2:	83 e0       	ldi	r24, 0x03	; 3
+     fa4:	8e bd       	out	0x2e, r24	; 46
+    while((SPSR & _BV(SPIF)) == 0);
+     fa6:	0d b4       	in	r0, 0x2d	; 45
+     fa8:	07 fe       	sbrs	r0, 7
+     faa:	fd cf       	rjmp	.-6      	; 0xfa6 <spi_sram_start_read+0x6>
+
+	//アドレス送信
+	SPDR     = 0x00;
+     fac:	1e bc       	out	0x2e, r1	; 46
+    while((SPSR & _BV(SPIF)) == 0);
+     fae:	0d b4       	in	r0, 0x2d	; 45
+     fb0:	07 fe       	sbrs	r0, 7
+     fb2:	fd cf       	rjmp	.-6      	; 0xfae <spi_sram_start_read+0xe>
+	SPDR     = 0x00;
+     fb4:	1e bc       	out	0x2e, r1	; 46
+    while((SPSR & _BV(SPIF)) == 0);
+     fb6:	0d b4       	in	r0, 0x2d	; 45
+     fb8:	07 fe       	sbrs	r0, 7
+     fba:	fd cf       	rjmp	.-6      	; 0xfb6 <spi_sram_start_read+0x16>
+	SPDR     = 0x00;
+     fbc:	1e bc       	out	0x2e, r1	; 46
+    while((SPSR & _BV(SPIF)) == 0);
+     fbe:	0d b4       	in	r0, 0x2d	; 45
+     fc0:	07 fe       	sbrs	r0, 7
+     fc2:	fd cf       	rjmp	.-6      	; 0xfbe <spi_sram_start_read+0x1e>
+}
+     fc4:	08 95       	ret
+
+00000fc6 <spi_sram_start_write>:
+
+//SRAM書き出し準備
+void spi_sram_start_write(unsigned long start) {
+
+	//CS下げる
+	PORTD &= ~_BV(PD4);
+     fc6:	5c 98       	cbi	0x0b, 4	; 11
+
+	//WRITE送信
+	SPDR     = 0x02;
+     fc8:	82 e0       	ldi	r24, 0x02	; 2
+     fca:	8e bd       	out	0x2e, r24	; 46
+    while((SPSR & _BV(SPIF)) == 0);
+     fcc:	0d b4       	in	r0, 0x2d	; 45
+     fce:	07 fe       	sbrs	r0, 7
+     fd0:	fd cf       	rjmp	.-6      	; 0xfcc <spi_sram_start_write+0x6>
+
+	//アドレス送信
+	SPDR     = 0x00;
+     fd2:	1e bc       	out	0x2e, r1	; 46
+    while((SPSR & _BV(SPIF)) == 0);
+     fd4:	0d b4       	in	r0, 0x2d	; 45
+     fd6:	07 fe       	sbrs	r0, 7
+     fd8:	fd cf       	rjmp	.-6      	; 0xfd4 <spi_sram_start_write+0xe>
+	SPDR     = 0x00;
+     fda:	1e bc       	out	0x2e, r1	; 46
+    while((SPSR & _BV(SPIF)) == 0);
+     fdc:	0d b4       	in	r0, 0x2d	; 45
+     fde:	07 fe       	sbrs	r0, 7
+     fe0:	fd cf       	rjmp	.-6      	; 0xfdc <spi_sram_start_write+0x16>
+	SPDR     = 0x00;
+     fe2:	1e bc       	out	0x2e, r1	; 46
+    while((SPSR & _BV(SPIF)) == 0);
+     fe4:	0d b4       	in	r0, 0x2d	; 45
+     fe6:	07 fe       	sbrs	r0, 7
+     fe8:	fd cf       	rjmp	.-6      	; 0xfe4 <spi_sram_start_write+0x1e>
+}
+     fea:	08 95       	ret
+
+00000fec <spi_sram_stop>:
+
+
+//SRAM読み出し準備
+void spi_sram_stop() {
+
+	PORTD |= _BV(PD4);
+     fec:	5c 9a       	sbi	0x0b, 4	; 11
+}
+     fee:	08 95       	ret
+
+00000ff0 <spi_sram_rewind>:
+
+//SRAM巻き戻し
+void spi_sram_rewind() {
+
+	//0バイトに戻す
+	spi_sram_addr = 0;
+     ff0:	10 92 02 01 	sts	0x0102, r1
+     ff4:	10 92 03 01 	sts	0x0103, r1
+     ff8:	10 92 04 01 	sts	0x0104, r1
+     ffc:	10 92 05 01 	sts	0x0105, r1
+	spi_sram_crc  = 0xFFFF;
+    1000:	8f ef       	ldi	r24, 0xFF	; 255
+    1002:	9f ef       	ldi	r25, 0xFF	; 255
+    1004:	90 93 62 01 	sts	0x0162, r25
+    1008:	80 93 61 01 	sts	0x0161, r24
+}
+    100c:	08 95       	ret
+
+0000100e <spi_sram_resister_write>:
+
+
+//SRAMレジスタ書き込み
+void spi_sram_resister_write(unsigned char c) {
+    100e:	98 2f       	mov	r25, r24
+
+	//CS下げる
+	PORTD &= ~_BV(PD4);
+    1010:	5c 98       	cbi	0x0b, 4	; 11
+
+	//レジスタ書き換え送信
+	SPDR     = 0x01;
+    1012:	81 e0       	ldi	r24, 0x01	; 1
+    1014:	8e bd       	out	0x2e, r24	; 46
+    while((SPSR & _BV(SPIF)) == 0);
+    1016:	0d b4       	in	r0, 0x2d	; 45
+    1018:	07 fe       	sbrs	r0, 7
+    101a:	fd cf       	rjmp	.-6      	; 0x1016 <spi_sram_resister_write+0x8>
+
+	//レジスタ値設定
+	SPDR     = c;
+    101c:	9e bd       	out	0x2e, r25	; 46
+    while((SPSR & _BV(SPIF)) == 0);
+    101e:	0d b4       	in	r0, 0x2d	; 45
+    1020:	07 fe       	sbrs	r0, 7
+    1022:	fd cf       	rjmp	.-6      	; 0x101e <spi_sram_resister_write+0x10>
+
+	PORTD |= _BV(PD4);
+    1024:	5c 9a       	sbi	0x0b, 4	; 11
+}
+    1026:	08 95       	ret
+
+00001028 <spi_sram_resister_read>:
+unsigned char spi_sram_resister_read() {
+
+	unsigned char c;
+
+	//CS下げる
+	PORTD &= ~_BV(PD4);
+    1028:	5c 98       	cbi	0x0b, 4	; 11
+
+	//レジスタ書き換え送信
+	SPDR     = 0x05;
+    102a:	85 e0       	ldi	r24, 0x05	; 5
+    102c:	8e bd       	out	0x2e, r24	; 46
+    while((SPSR & _BV(SPIF)) == 0);
+    102e:	0d b4       	in	r0, 0x2d	; 45
+    1030:	07 fe       	sbrs	r0, 7
+    1032:	fd cf       	rjmp	.-6      	; 0x102e <spi_sram_resister_read+0x6>
+
+	//ダミー送信
+	SPDR     = 0x00;
+    1034:	1e bc       	out	0x2e, r1	; 46
+    while((SPSR & _BV(SPIF)) == 0);
+    1036:	0d b4       	in	r0, 0x2d	; 45
+    1038:	07 fe       	sbrs	r0, 7
+    103a:	fd cf       	rjmp	.-6      	; 0x1036 <spi_sram_resister_read+0xe>
+
+	c=SPDR;
+    103c:	8e b5       	in	r24, 0x2e	; 46
+
+	PORTD |= _BV(PD4);
+    103e:	5c 9a       	sbi	0x0b, 4	; 11
+
+    return c;
+}
+    1040:	08 95       	ret
+
+00001042 <spi_master>:
+volatile uint32_t spi_sram_addr = 0;
+volatile uint16_t spi_sram_crc;
+
+void spi_master(uint8_t c) {
+
+	if(c) {
+    1042:	88 23       	and	r24, r24
+    1044:	59 f0       	breq	.+22     	; 0x105c <spi_master+0x1a>
+		uart_putsP(PSTR("+MASTER\r\n"), 9);
+    1046:	8b e0       	ldi	r24, 0x0B	; 11
+    1048:	92 e0       	ldi	r25, 0x02	; 2
+    104a:	69 e0       	ldi	r22, 0x09	; 9
+    104c:	0e 94 c0 01 	call	0x380	; 0x380 <uart_putsP>
+		//一度無効にしないと再有効化できない？
+		SPCR   = 0x00; 
+    1050:	1c bc       	out	0x2c, r1	; 44
+		DDRB  |= _BV(PB4)|_BV(PB5)|_BV(PB7);
+    1052:	84 b1       	in	r24, 0x04	; 4
+    1054:	80 6b       	ori	r24, 0xB0	; 176
+    1056:	84 b9       	out	0x04, r24	; 4
+		SPCR   = _BV(SPE) | _BV(MSTR); 
+    1058:	80 e5       	ldi	r24, 0x50	; 80
+    105a:	02 c0       	rjmp	.+4      	; 0x1060 <spi_master+0x1e>
+	}else{
+		SPCR   = 0x00; 
+    105c:	1c bc       	out	0x2c, r1	; 44
+		SPCR   = _BV(SPE);
+    105e:	80 e4       	ldi	r24, 0x40	; 64
+    1060:	8c bd       	out	0x2c, r24	; 44
+    1062:	08 95       	ret
+
+00001064 <__vector_12>:
+
+volatile uint8_t timer_count;
+volatile uint8_t timer_timeout;
+
+ISR(TIMER1_CAPT_vect)
+{
+    1064:	1f 92       	push	r1
+    1066:	0f 92       	push	r0
+    1068:	0f b6       	in	r0, 0x3f	; 63
+    106a:	0f 92       	push	r0
+    106c:	11 24       	eor	r1, r1
+    106e:	8f 93       	push	r24
+    timer_count++;
+    1070:	80 91 0f 01 	lds	r24, 0x010F
+    1074:	8f 5f       	subi	r24, 0xFF	; 255
+    1076:	80 93 0f 01 	sts	0x010F, r24
+}
+    107a:	8f 91       	pop	r24
+    107c:	0f 90       	pop	r0
+    107e:	0f be       	out	0x3f, r0	; 63
+    1080:	0f 90       	pop	r0
+    1082:	1f 90       	pop	r1
+    1084:	18 95       	reti
+
+00001086 <timer_stop>:
+
+void timer_stop(){
+
+	//制御レジスタA
+	TCCR1A = 0x00;
+    1086:	10 92 80 00 	sts	0x0080, r1
+	//制御レジスタB
+	TCCR1B = _BV(WGM13) | _BV(WGM12);
+    108a:	88 e1       	ldi	r24, 0x18	; 24
+    108c:	80 93 81 00 	sts	0x0081, r24
+
+	TIMSK1 = 0x00;
+    1090:	10 92 6f 00 	sts	0x006F, r1
+}
+    1094:	08 95       	ret
+
+00001096 <timer_start>:
+
+void timer_start(){
+
+	//制御レジスタA
+	TCCR1A = 0x00;
+    1096:	10 92 80 00 	sts	0x0080, r1
+	//制御レジスタB
+	TCCR1B = _BV(WGM13) | _BV(WGM12) |_BV(CS12) |_BV(CS10);
+    109a:	8d e1       	ldi	r24, 0x1D	; 29
+    109c:	80 93 81 00 	sts	0x0081, r24
+  
+	//最大値 1秒
+	ICR1 = 18000;
+    10a0:	80 e5       	ldi	r24, 0x50	; 80
+    10a2:	96 e4       	ldi	r25, 0x46	; 70
+    10a4:	90 93 87 00 	sts	0x0087, r25
+    10a8:	80 93 86 00 	sts	0x0086, r24
+
+	TIMSK1 = _BV(ICIE1);
+    10ac:	80 e2       	ldi	r24, 0x20	; 32
+    10ae:	80 93 6f 00 	sts	0x006F, r24
+
+	timer_count = 0;
+    10b2:	10 92 0f 01 	sts	0x010F, r1
+}
+    10b6:	08 95       	ret
+
+000010b8 <atoi>:
+    10b8:	fc 01       	movw	r30, r24
+    10ba:	88 27       	eor	r24, r24
+    10bc:	99 27       	eor	r25, r25
+    10be:	e8 94       	clt
+    10c0:	21 91       	ld	r18, Z+
+    10c2:	20 32       	cpi	r18, 0x20	; 32
+    10c4:	e9 f3       	breq	.-6      	; 0x10c0 <atoi+0x8>
+    10c6:	29 30       	cpi	r18, 0x09	; 9
+    10c8:	10 f0       	brcs	.+4      	; 0x10ce <atoi+0x16>
+    10ca:	2e 30       	cpi	r18, 0x0E	; 14
+    10cc:	c8 f3       	brcs	.-14     	; 0x10c0 <atoi+0x8>
+    10ce:	2b 32       	cpi	r18, 0x2B	; 43
+    10d0:	41 f0       	breq	.+16     	; 0x10e2 <atoi+0x2a>
+    10d2:	2d 32       	cpi	r18, 0x2D	; 45
+    10d4:	39 f4       	brne	.+14     	; 0x10e4 <atoi+0x2c>
+    10d6:	68 94       	set
+    10d8:	04 c0       	rjmp	.+8      	; 0x10e2 <atoi+0x2a>
+    10da:	0e 94 b6 08 	call	0x116c	; 0x116c <__mulhi_const_10>
+    10de:	82 0f       	add	r24, r18
+    10e0:	91 1d       	adc	r25, r1
+    10e2:	21 91       	ld	r18, Z+
+    10e4:	20 53       	subi	r18, 0x30	; 48
+    10e6:	2a 30       	cpi	r18, 0x0A	; 10
+    10e8:	c0 f3       	brcs	.-16     	; 0x10da <atoi+0x22>
+    10ea:	1e f4       	brtc	.+6      	; 0x10f2 <atoi+0x3a>
+    10ec:	90 95       	com	r25
+    10ee:	81 95       	neg	r24
+    10f0:	9f 4f       	sbci	r25, 0xFF	; 255
+    10f2:	08 95       	ret
+
+000010f4 <strtok_P>:
+    10f4:	46 e0       	ldi	r20, 0x06	; 6
+    10f6:	51 e0       	ldi	r21, 0x01	; 1
+    10f8:	0e 94 88 08 	call	0x1110	; 0x1110 <strtok_rP>
+    10fc:	08 95       	ret
+
+000010fe <strcmp_P>:
+    10fe:	fb 01       	movw	r30, r22
+    1100:	dc 01       	movw	r26, r24
+    1102:	8d 91       	ld	r24, X+
+    1104:	05 90       	lpm	r0, Z+
+    1106:	80 19       	sub	r24, r0
+    1108:	01 10       	cpse	r0, r1
+    110a:	d9 f3       	breq	.-10     	; 0x1102 <strcmp_P+0x4>
+    110c:	99 0b       	sbc	r25, r25
+    110e:	08 95       	ret
+
+00001110 <strtok_rP>:
+    1110:	fa 01       	movw	r30, r20
+    1112:	a1 91       	ld	r26, Z+
+    1114:	b0 81       	ld	r27, Z
+    1116:	00 97       	sbiw	r24, 0x00	; 0
+    1118:	19 f4       	brne	.+6      	; 0x1120 <strtok_rP+0x10>
+    111a:	10 97       	sbiw	r26, 0x00	; 0
+    111c:	e1 f0       	breq	.+56     	; 0x1156 <strtok_rP+0x46>
+    111e:	cd 01       	movw	r24, r26
+    1120:	dc 01       	movw	r26, r24
+    1122:	cd 01       	movw	r24, r26
+    1124:	0d 90       	ld	r0, X+
+    1126:	00 20       	and	r0, r0
+    1128:	11 f4       	brne	.+4      	; 0x112e <strtok_rP+0x1e>
+    112a:	c0 01       	movw	r24, r0
+    112c:	13 c0       	rjmp	.+38     	; 0x1154 <strtok_rP+0x44>
+    112e:	fb 01       	movw	r30, r22
+    1130:	25 91       	lpm	r18, Z+
+    1132:	22 23       	and	r18, r18
+    1134:	19 f0       	breq	.+6      	; 0x113c <strtok_rP+0x2c>
+    1136:	20 15       	cp	r18, r0
+    1138:	d9 f7       	brne	.-10     	; 0x1130 <strtok_rP+0x20>
+    113a:	f3 cf       	rjmp	.-26     	; 0x1122 <strtok_rP+0x12>
+    113c:	fb 01       	movw	r30, r22
+    113e:	25 91       	lpm	r18, Z+
+    1140:	20 15       	cp	r18, r0
+    1142:	19 f4       	brne	.+6      	; 0x114a <strtok_rP+0x3a>
+    1144:	1e 92       	st	-X, r1
+    1146:	11 96       	adiw	r26, 0x01	; 1
+    1148:	06 c0       	rjmp	.+12     	; 0x1156 <strtok_rP+0x46>
+    114a:	22 23       	and	r18, r18
+    114c:	c1 f7       	brne	.-16     	; 0x113e <strtok_rP+0x2e>
+    114e:	0d 90       	ld	r0, X+
+    1150:	00 20       	and	r0, r0
+    1152:	a1 f7       	brne	.-24     	; 0x113c <strtok_rP+0x2c>
+    1154:	d0 01       	movw	r26, r0
+    1156:	fa 01       	movw	r30, r20
+    1158:	a1 93       	st	Z+, r26
+    115a:	b0 83       	st	Z, r27
+    115c:	08 95       	ret
+
+0000115e <strcpy>:
+    115e:	fb 01       	movw	r30, r22
+    1160:	dc 01       	movw	r26, r24
+    1162:	01 90       	ld	r0, Z+
+    1164:	0d 92       	st	X+, r0
+    1166:	00 20       	and	r0, r0
+    1168:	e1 f7       	brne	.-8      	; 0x1162 <strcpy+0x4>
+    116a:	08 95       	ret
+
+0000116c <__mulhi_const_10>:
+    116c:	7a e0       	ldi	r23, 0x0A	; 10
+    116e:	97 9f       	mul	r25, r23
+    1170:	90 2d       	mov	r25, r0
+    1172:	87 9f       	mul	r24, r23
+    1174:	80 2d       	mov	r24, r0
+    1176:	91 0d       	add	r25, r1
+    1178:	11 24       	eor	r1, r1
+    117a:	08 95       	ret
+
+0000117c <_exit>:
+    117c:	f8 94       	cli
+
+0000117e <__stop_program>:
+    117e:	ff cf       	rjmp	.-2      	; 0x117e <__stop_program>
