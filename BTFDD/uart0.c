@@ -1,8 +1,8 @@
 #include <avr/io.h>
 #include <avr/pgmspace.h>
 #include <avr/interrupt.h>
-#include <util/crc16.h>
 #include "global.h"
+#include "crc16.h"
 #include "shell.h"
 #include "spi.h"
 #include "shell.h"
@@ -112,8 +112,10 @@ void uart_sram_write_raw(unsigned long size) {
 	    loop_until_bit_is_set(UCSR0A, RXC0);
 		c = UDR0;
 		SPDR = c;
-		spi_sram_crc = crcByte(spi_sram_crc, c);
+		//spi_sram_crc = crcByte(spi_sram_crc, c);
 		//spi_sram_crc = _crc_ccitt_update(spi_sram_crc, c);
+		spi_sram_crc = accumulate_crc16(spi_sram_crc, c);
+
 	    while(!(SPSR & (1<<SPIF)));
 		recieved++;
 	}
@@ -127,7 +129,6 @@ void uart_sram_write_raw(unsigned long size) {
 	uart_putsP(PSTR("+SRAM WRITE DONE "), 17);
     uart_itoh((unsigned char) (spi_sram_crc >> 8) & 0xFF);
     uart_itoh((unsigned char) (spi_sram_crc     ) & 0xFF);
-
 	uart_putnewline();
 
 

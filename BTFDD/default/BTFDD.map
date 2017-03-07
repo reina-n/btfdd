@@ -58,6 +58,7 @@ LOAD global.o
 LOAD shell.o
 LOAD spi.o
 LOAD timer1.o
+LOAD crc16.o
 LOAD c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a
 LOAD c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a
 LOAD c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a
@@ -152,7 +153,7 @@ LOAD c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x1180
+.text           0x00000000     0x1192
  *(.vectors)
  .vectors       0x00000000       0x7c c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5/crtm324p.o
                 0x00000000                __vector_default
@@ -254,7 +255,7 @@ LOAD c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc
                 0x000004dc                __vector_20
                 0x00000570                uart_sram_read_hex
                 0x000005d8                uart_sram_write_raw
- .text          0x000006c4      0x5f2 fdc.o
+ .text          0x000006c4      0x61a fdc.o
                 0x000006c4                __vector_2
                 0x00000712                fdc_set_highden
                 0x00000742                fdc_set_chrn
@@ -266,69 +267,71 @@ LOAD c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc
                 0x00000860                fdc_write_cr
                 0x00000894                fdc_write_do
                 0x000008e6                fdc_write
-                0x0000090c                fdc_exec_08
-                0x000009de                __vector_1
-                0x00000af0                fdc_exec_07
-                0x00000b14                fdc_exec_0F
-                0x00000b50                fdc_exec_04
-                0x00000bc4                fdc_exec_03
-                0x00000c00                fdc_pcatreset
-                0x00000c3e                fdc_exec_0A
- .text          0x00000cb6       0xbe global.o
-                0x00000cb6                data_in
-                0x00000cbc                data_out
-                0x00000cc2                htoi
-                0x00000d32                crcByte
- .text          0x00000d74      0x21a shell.o
-                0x00000d74                shell_exec
- .text          0x00000f8e       0xd6 spi.o
-                0x00000f8e                spi_leds_set
-                0x00000fa0                spi_sram_start_read
-                0x00000fc6                spi_sram_start_write
-                0x00000fec                spi_sram_stop
-                0x00000ff0                spi_sram_rewind
-                0x0000100e                spi_sram_resister_write
-                0x00001028                spi_sram_resister_read
-                0x00001042                spi_master
- .text          0x00001064       0x54 timer1.o
-                0x00001064                __vector_12
-                0x00001086                timer_stop
-                0x00001096                timer_start
- .text          0x000010b8        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_exit.o)
- .text          0x000010b8        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_clear_bss.o)
- .text          0x000010b8        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(atoi.o)
- .text          0x000010b8        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(strtok_P.o)
- .text          0x000010b8        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(strcmp_P.o)
- .text          0x000010b8        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(strtok_rP.o)
- .text          0x000010b8        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(strcpy.o)
- .text          0x000010b8        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(mul10.o)
-                0x000010b8                . = ALIGN (0x2)
+                0x0000090c                fdc_exec_06
+                0x00000934                fdc_exec_08
+                0x00000a06                __vector_1
+                0x00000b18                fdc_exec_07
+                0x00000b3c                fdc_exec_0F
+                0x00000b78                fdc_exec_04
+                0x00000bec                fdc_exec_03
+                0x00000c28                fdc_pcatreset
+                0x00000c66                fdc_exec_0A
+ .text          0x00000cde       0x7c global.o
+                0x00000cde                data_in
+                0x00000ce4                data_out
+                0x00000cea                htoi
+ .text          0x00000d5a      0x21a shell.o
+                0x00000d5a                shell_exec
+ .text          0x00000f74       0xd6 spi.o
+                0x00000f74                spi_leds_set
+                0x00000f86                spi_sram_start_read
+                0x00000fac                spi_sram_start_write
+                0x00000fd2                spi_sram_stop
+                0x00000fd6                spi_sram_rewind
+                0x00000ff4                spi_sram_resister_write
+                0x0000100e                spi_sram_resister_read
+                0x00001028                spi_master
+ .text          0x0000104a       0x54 timer1.o
+                0x0000104a                __vector_12
+                0x0000106c                timer_stop
+                0x0000107c                timer_start
+ .text          0x0000109e       0x2c crc16.o
+                0x0000109e                accumulate_crc16
+ .text          0x000010ca        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_exit.o)
+ .text          0x000010ca        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_clear_bss.o)
+ .text          0x000010ca        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(atoi.o)
+ .text          0x000010ca        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(strtok_P.o)
+ .text          0x000010ca        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(strcmp_P.o)
+ .text          0x000010ca        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(strtok_rP.o)
+ .text          0x000010ca        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(strcpy.o)
+ .text          0x000010ca        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(mul10.o)
+                0x000010ca                . = ALIGN (0x2)
  *(.text.*)
- .text.libgcc   0x000010b8        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x000010b8        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x000010ca        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x000010ca        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_clear_bss.o)
  .text.avr-libc
-                0x000010b8       0x3c c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(atoi.o)
-                0x000010b8                atoi
+                0x000010ca       0x3c c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(atoi.o)
+                0x000010ca                atoi
  .text.avr-libc
-                0x000010f4        0xa c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(strtok_P.o)
-                0x000010f4                strtok_P
+                0x00001106        0xa c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(strtok_P.o)
+                0x00001106                strtok_P
  .text.avr-libc
-                0x000010fe       0x12 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(strcmp_P.o)
-                0x000010fe                strcmp_P
+                0x00001110       0x12 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(strcmp_P.o)
+                0x00001110                strcmp_P
  .text.avr-libc
-                0x00001110       0x4e c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(strtok_rP.o)
-                0x00001110                strtok_rP
+                0x00001122       0x4e c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(strtok_rP.o)
+                0x00001122                strtok_rP
  .text.avr-libc
-                0x0000115e        0xe c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(strcpy.o)
-                0x0000115e                strcpy
+                0x00001170        0xe c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(strcpy.o)
+                0x00001170                strcpy
  .text.avr-libc
-                0x0000116c       0x10 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(mul10.o)
-                0x0000116c                __mulhi_const_10
-                0x0000117c                . = ALIGN (0x2)
+                0x0000117e       0x10 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(mul10.o)
+                0x0000117e                __mulhi_const_10
+                0x0000118e                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000117c        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_exit.o)
-                0x0000117c                _exit
-                0x0000117c                exit
+ .fini9         0x0000118e        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_exit.o)
+                0x0000118e                _exit
+                0x0000118e                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -347,11 +350,11 @@ LOAD c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000117c        0x4 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000118e        0x4 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00001180                _etext = .
+                0x00001192                _etext = .
 
-.data           0x00800100        0x0 load address 0x00001180
+.data           0x00800100        0x0 load address 0x00001192
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5/crtm324p.o
@@ -362,6 +365,7 @@ LOAD c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc
  .data          0x00800100        0x0 shell.o
  .data          0x00800100        0x0 spi.o
  .data          0x00800100        0x0 timer1.o
+ .data          0x00800100        0x0 crc16.o
  .data          0x00800100        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_exit.o)
  .data          0x00800100        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_clear_bss.o)
  .data          0x00800100        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(atoi.o)
@@ -392,6 +396,7 @@ LOAD c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc
                 0x00800101                spi_leds
                 0x00800102                spi_sram_addr
  .bss           0x00800106        0x0 timer1.o
+ .bss           0x00800106        0x0 crc16.o
  .bss           0x00800106        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_exit.o)
  .bss           0x00800106        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_clear_bss.o)
  .bss           0x00800106        0x0 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a(atoi.o)
@@ -422,8 +427,8 @@ LOAD c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc
                 0x00800179                uart_shell_command
                 0x00800180                uart_shell_argc
                 0x00800181                PROVIDE (__bss_end, .)
-                0x00001180                __data_load_start = LOADADDR (.data)
-                0x00001180                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00001192                __data_load_start = LOADADDR (.data)
+                0x00001192                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800181        0x0
                 0x00800181                PROVIDE (__noinit_start, .)
@@ -486,7 +491,7 @@ LOAD c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0xe0
+.debug_aranges  0x00000000      0x100
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 BTFDD.o
@@ -502,93 +507,98 @@ LOAD c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc
                 0x000000a0       0x20 spi.o
  .debug_aranges
                 0x000000c0       0x20 timer1.o
+ .debug_aranges
+                0x000000e0       0x20 crc16.o
 
 .debug_pubnames
-                0x00000000      0x589
+                0x00000000      0x58d
  *(.debug_pubnames)
  .debug_pubnames
                 0x00000000       0x7a BTFDD.o
  .debug_pubnames
                 0x0000007a      0x11e uart0.o
  .debug_pubnames
-                0x00000198      0x1c2 fdc.o
+                0x00000198      0x1d2 fdc.o
  .debug_pubnames
-                0x0000035a       0x50 global.o
+                0x0000036a       0x44 global.o
  .debug_pubnames
-                0x000003aa       0x8c shell.o
+                0x000003ae       0x8c shell.o
  .debug_pubnames
-                0x00000436       0xf0 spi.o
+                0x0000043a       0xf0 spi.o
  .debug_pubnames
-                0x00000526       0x63 timer1.o
+                0x0000052a       0x63 timer1.o
 
-.debug_info     0x00000000     0x1e62
+.debug_info     0x00000000     0x1ee1
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x6cc c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5/crtm324p.o
  .debug_info    0x000006cc      0x156 BTFDD.o
  .debug_info    0x00000822      0x432 uart0.o
- .debug_info    0x00000c54      0xb1d fdc.o
- .debug_info    0x00001771      0x130 global.o
- .debug_info    0x000018a1      0x2e5 shell.o
- .debug_info    0x00001b86      0x210 spi.o
- .debug_info    0x00001d96       0xcc timer1.o
+ .debug_info    0x00000c54      0xb61 fdc.o
+ .debug_info    0x000017b5       0xf7 global.o
+ .debug_info    0x000018ac      0x2e5 shell.o
+ .debug_info    0x00001b91      0x210 spi.o
+ .debug_info    0x00001da1       0xcc timer1.o
+ .debug_info    0x00001e6d       0x74 crc16.o
 
-.debug_abbrev   0x00000000      0xd6b
+.debug_abbrev   0x00000000      0xd8c
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x66e c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5/crtm324p.o
  .debug_abbrev  0x0000066e       0x97 BTFDD.o
  .debug_abbrev  0x00000705      0x1a2 uart0.o
- .debug_abbrev  0x000008a7      0x1e6 fdc.o
- .debug_abbrev  0x00000a8d       0xb0 global.o
- .debug_abbrev  0x00000b3d       0xba shell.o
- .debug_abbrev  0x00000bf7       0xfd spi.o
- .debug_abbrev  0x00000cf4       0x77 timer1.o
+ .debug_abbrev  0x000008a7      0x1f3 fdc.o
+ .debug_abbrev  0x00000a9a       0xb0 global.o
+ .debug_abbrev  0x00000b4a       0xba shell.o
+ .debug_abbrev  0x00000c04       0xfd spi.o
+ .debug_abbrev  0x00000d01       0x77 timer1.o
+ .debug_abbrev  0x00000d78       0x14 crc16.o
 
-.debug_line     0x00000000     0x1583
+.debug_line     0x00000000     0x15d5
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000       0x1d c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5/crtm324p.o
  .debug_line    0x0000001d      0x1f7 BTFDD.o
  .debug_line    0x00000214      0x3fe uart0.o
- .debug_line    0x00000612      0x8f2 fdc.o
- .debug_line    0x00000f04       0xf3 global.o
- .debug_line    0x00000ff7      0x22c shell.o
- .debug_line    0x00001223      0x268 spi.o
- .debug_line    0x0000148b       0xf8 timer1.o
+ .debug_line    0x00000612      0x92d fdc.o
+ .debug_line    0x00000f3f       0xbb global.o
+ .debug_line    0x00000ffa      0x22c shell.o
+ .debug_line    0x00001226      0x268 spi.o
+ .debug_line    0x0000148e       0xf8 timer1.o
+ .debug_line    0x00001586       0x4f crc16.o
 
 .debug_frame    0x00000000      0x340
  *(.debug_frame)
  .debug_frame   0x00000000       0x20 BTFDD.o
  .debug_frame   0x00000020       0xa0 uart0.o
- .debug_frame   0x000000c0      0x140 fdc.o
- .debug_frame   0x00000200       0x50 global.o
+ .debug_frame   0x000000c0      0x150 fdc.o
+ .debug_frame   0x00000210       0x40 global.o
  .debug_frame   0x00000250       0x20 shell.o
  .debug_frame   0x00000270       0x90 spi.o
  .debug_frame   0x00000300       0x40 timer1.o
 
-.debug_str      0x00000000      0x71c
+.debug_str      0x00000000      0x720
  *(.debug_str)
  .debug_str     0x00000000      0x255 c:/program files/atmel/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5/crtm324p.o
  .debug_str     0x00000255       0xe1 BTFDD.o
                                 0x11a (size before relaxing)
  .debug_str     0x00000336      0x125 uart0.o
                                 0x1ff (size before relaxing)
- .debug_str     0x0000045b      0x15d fdc.o
-                                0x25e (size before relaxing)
- .debug_str     0x000005b8       0x36 global.o
-                                 0xf1 (size before relaxing)
- .debug_str     0x000005ee       0x5f shell.o
+ .debug_str     0x0000045b      0x169 fdc.o
+                                0x26a (size before relaxing)
+ .debug_str     0x000005c4       0x2e global.o
+                                 0xe9 (size before relaxing)
+ .debug_str     0x000005f2       0x5f shell.o
                                 0x146 (size before relaxing)
- .debug_str     0x0000064d       0xa0 spi.o
+ .debug_str     0x00000651       0xa0 spi.o
                                 0x196 (size before relaxing)
- .debug_str     0x000006ed       0x2f timer1.o
+ .debug_str     0x000006f1       0x2f timer1.o
                                 0x107 (size before relaxing)
 
-.debug_loc      0x00000000      0x542
+.debug_loc      0x00000000      0x4ed
  *(.debug_loc)
  .debug_loc     0x00000000      0x154 uart0.o
- .debug_loc     0x00000154      0x1d9 fdc.o
- .debug_loc     0x0000032d       0xe6 global.o
- .debug_loc     0x00000413       0xe0 shell.o
- .debug_loc     0x000004f3       0x4f spi.o
+ .debug_loc     0x00000154      0x20a fdc.o
+ .debug_loc     0x0000035e       0x60 global.o
+ .debug_loc     0x000003be       0xe0 shell.o
+ .debug_loc     0x0000049e       0x4f spi.o
 
 .debug_macinfo
  *(.debug_macinfo)

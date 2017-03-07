@@ -37,7 +37,7 @@ HEX_EEPROM_FLAGS += --change-section-lma .eeprom=0 --no-change-warnings
 
 
 ## Objects that must be built in order to link
-OBJECTS = BTFDD.o uart0.o fdc.o global.o shell.o spi.o timer1.o 
+OBJECTS = BTFDD.o uart0.o fdc.o global.o shell.o spi.o timer1.o crc16.o 
 
 ## Objects explicitly added by the user
 LINKONLYOBJECTS = 
@@ -64,6 +64,9 @@ spi.o: ../spi.c
 
 timer1.o: ../timer1.c
 	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
+
+crc16.o: ../crc16.S
+	$(CC) $(INCLUDES) $(ASMFLAGS) -c  $<
 
 ##Link
 $(TARGET): $(OBJECTS)

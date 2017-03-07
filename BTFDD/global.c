@@ -33,11 +33,14 @@ int htoi (const char *s) {
     return n;
 }
 
-unsigned int crcByte(unsigned int crc, unsigned char b) {
-  crc = (unsigned char)(crc >> 8) | (crc << 8);
-  crc ^= b;
-  crc ^= (unsigned char)(crc & 0xff) >> 4;
-  crc ^= crc << 12;
-  crc ^= (crc & 0xff) << 5;
-  return crc;
-}
+
+#if 0
+	unsigned int crcByte(unsigned int crc, unsigned char b) {
+		crc = (unsigned char)(crc >> 8) | (crc << 8);
+		crc ^= b;
+		crc ^= (unsigned char)(crc & 0xff) >> 4;
+		crc ^= crc << 12;
+		crc ^= (crc & 0xff) << 5;
+		return crc;
+	}
+#endif

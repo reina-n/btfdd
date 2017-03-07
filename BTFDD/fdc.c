@@ -412,7 +412,13 @@ unsigned char fdc_exec_08(){
 //READ DATA
 void fdc_exec_06(unsigned char c1, unsigned char c2){
 
+	//データ長を計算
+	unsigned long int len;
+
  	fdc_command = 0x06;
+
+
+
 
     //MTはサポートしない
 	fdc_loop_until_rqm();
